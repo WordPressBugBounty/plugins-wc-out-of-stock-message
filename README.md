@@ -1,0 +1,1 @@
+# plugins-wc-out-of-stock-message
