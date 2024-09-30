@@ -1,33 +1,32 @@
-=== Out of Stock Message for WooCommerce ===
+=== Out of Stock Message Manage ===
 Contributors: coderstime, lincolndu
 Donate link: https://buymeacoffee.com/coderstime
 Tags: out of stock, sold out, badge, stock, stock alert email, stock alert
 Requires at least: 4.9 or higher
-Tested up to: 6.5
+Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 1.0.6
+Stable tag: 2.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
-Out of Stock Message for WooCommerce is an official plugin maintained by the Coderstime that add an extra feature on the “woocommerce inventory settings” option on the woocommerce.
+Out of Stock Manage for WooCommerce is an official plugin maintained by the Coderstime that add an extra feature on the “woocommerce inventory settings” option on the woocommerce.
 
 == Description ==
 
-Out of Stock Message for WooCommerce plugin is used to write out of stock custom message with different background and text color. This stock out message can be set on woocommerce specific product or all global products. You can inform your customer product stock status in product details page. How many product on your stock will show on product page.
+Out of Stock Manage for WooCommerce plugin is used to write out of stock custom message with different background and text color. This stock out message can be set on woocommerce specific product or all global products. You can inform your customer product stock status in product details page. How many product on your stock will show on product page.
 
 You can change default stock out status message and change colors with where message will be shown.
 
 FEATURES
-Allows specific product message.
-Allows global message from WooCommerce inventory setting.
-Sold out badge for product loop and single product
+Allow product specific message.
+Allow global message from plugin settings.
+Sold out badge for category and shop page also single product page
 Can customize message showing position in product page.
 Admin will receive when a product stock out.
 In Stock product quantity message on product page
 
 
 ### USEFULL LINKS:
-> * [Live Demo Pro Version](https://coders-time.com/product/out-of-stock-pro-demo/)
 > * [Live Demo Free Version](https://wordpress.org/plugins/wc-out-of-stock-message/?preview=1)
 > * [Video Tutorial](https://youtu.be/guh-hkrJF_E)
 > * [Documentation](https://coders-time.com/out-of-stock-documentation/)
@@ -39,8 +38,8 @@ Why does this plugin?
 This plugin allows you to supply a literal message for stock out product. 
 
 Default "Out of Stock" Message
-1. Go to WooCommerce > Settings > Products > Inventory
-2. Type your message on "Out of Stock Message" field
+1. Go to Dashboard > Out of Stock Menu 
+2. Set Message, Badge, settings, get shortcode details
 3. Save Changes
 
 Individual "Out of Stock" Message
@@ -80,7 +79,7 @@ Manual installation method requires downloading the Out of Stock Message plugin 
 
 1. Upload this plugin to the /wp-content/plugins/ directory.
 2. Activate the plugin through the Plugins menu in WordPress.
-3. Go to WooCommerce > Settings > Products > Inventory. Then type your note on \"Out of Stock Note\" field. Then Save your setting.
+3. Go to Dashboard and select Out of stock menu.
 4. Go to Add/Edit product panel. Open Inventory setting of product data, select \"Out of Stock\" on \"Stock Status\" field. Then check global note or set individual note in \"Out of Stock Note\" field.
 
 == Sold out Badge == 
@@ -112,13 +111,35 @@ Out of stock plugin is a quick solution for woocommerce product inventory system
 
 
 == Screenshots ==
-1. Image for the Plugin Position
-2. Image for the Plugin Form
-3. Result of the Plugin Action
-4. Dashboard Metabox for Quick View
-5. StockOut Admin Alert Email
+1. Stock out message with bg and color settings page
+2. Stock Out Badge settings page
+3. Stock Out Settings page for badge show, hide sale, message position
+4. Product wise stock out message setting also set global message show/hide
+5. Product Details page 
+6. Category Page Stock out badge and hide price with custom message
+7. Shop Page Stock out badge and hide price with custom message
+8. Out of Stock Admin Alert ⤴︎
 
 == Changelog ==
+= 2.1 = 2024-9-30
+* bug fix
+* method_exists($product, 'is_in_stock') check in message.php
+
+= 2.0 = 2024-9-30
+* Lots of change
+* Block theme upgrade
+* Plugin will work on your block theme
+* Separate settings page with separate menu
+* Stock out products list sub menu under "Stock Out" menu 
+* Fix previous error
+* Stock out message with JoditEditor
+* Stock out badge with JoditEditor
+* Product wise message with WP Classical editor
+* If you uninstall, you can feedback why you leave the plugin
+* Contact details on stock out menu
+* Premium plugin feature details
+* Allow Tracking feature for better service 
+* Name change to "Out of Stock Message Manage" from "Out of Stock Message for Woocommerce"
 
 = 1.0.6 =
 * Variable product false issue fixed
