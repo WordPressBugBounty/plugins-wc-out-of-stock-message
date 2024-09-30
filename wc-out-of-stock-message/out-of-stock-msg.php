@@ -3,7 +3,7 @@
  * Plugin Name: Out Of Stock Message Manage
  * Requires Plugins: woocommerce
  * Plugin URI: https://coders-time.com/plugins/out-of-stock/
- * Version: 2.1
+ * Version: 2.3
  * Author: coderstime
  * Author URI: https://www.facebook.com/coderstime
  * Text Domain: wcosm
@@ -28,18 +28,24 @@ if ( ! defined( 'WP_WCSM_PLUGIN_PATH' ) ) {
 if ( ! defined( 'WCOSM_LIBS_PATH' ) ) {
 	define( 'WCOSM_LIBS_PATH', dirname( WCOSM_PLUGIN_FILE ) . '/includes/' );
 }
-
-require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
-
-use Outofstockmanage\Admin\Setup;
-use Outofstockmanage\Admin\Api;
-use Outofstockmanage\Admin\Settings;
-use Outofstockmanage\Admin\Lib_API;
-use Outofstockmanage\Admin\Message;
-
-define ( 'wcosm_ver', '2.0' );
+define ( 'wcosm_ver', '2.3' );
 define ( 'WCOSM_TEXT_DOMAIN', 'wcosm' );
 define ( 'WCOSM_PLUGIN_Name', 'Out Of Stock Manage for WooCommerce' );
+
+require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
+use Outofstockmanage\Setup;
+use Outofstockmanage\Api;
+use Outofstockmanage\Settings;
+use Outofstockmanage\Lib_API;
+use Outofstockmanage\Message;
+
+function outofstockmanage_activate() {
+	add_option( 'wcosm_active',time() );
+	if( 'no' == get_option('woocommerce_manage_stock') ){
+		update_option('woocommerce_manage_stock','yes');
+	}
+}
+register_activation_hook( __FILE__, 'outofstockmanage_activate' );
 
 if ( ! class_exists( 'outofstockmanage' ) ) :
 	/**
@@ -63,7 +69,7 @@ if ( ! class_exists( 'outofstockmanage' ) ) :
 				add_action( 'admin_notices', [$this,'missing_wc_notice'] );
 			}
 						
-			register_activation_hook( __FILE__, [$this,'outofstockmanage_activate'] );
+			
 			register_deactivation_hook( __FILE__, [$this,'outofstockmanage_deactivate'] ); /*plugin deactivation hook*/
 
 			if ( is_admin() ) {
@@ -109,18 +115,6 @@ if ( ! class_exists( 'outofstockmanage' ) ) :
 			echo '<div class="error"><p><strong>' . sprintf( esc_html__( 'Outofstockmanage requires WooCommerce to be installed and active. You can download %s here.', 'outofstockmanage' ), '<a href="https://woo.com/" target="_blank">WooCommerce</a>' ) . '</strong></p></div>';
 		}
 
-
-		/**
-		 * Activation hook.
-		 *
-		 * @since 0.1.0
-		 */
-		public function outofstockmanage_activate() {
-			add_option( 'wcosm_active',time() );
-			if( 'no'==get_option('woocommerce_manage_stock') ){
-				update_option('woocommerce_manage_stock','yes');
-			}
-		}
 		/**
 		 * Deactivation hook.
 		 *

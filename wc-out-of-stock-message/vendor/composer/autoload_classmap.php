@@ -6,10 +6,10 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Outofstockmanage\\Admin\\Client' => $baseDir . '/includes/admin/Client.php',
-    'Outofstockmanage\\Admin\\Insights' => $baseDir . '/includes/admin/Insights.php',
-    'Outofstockmanage\\Admin\\Promotions' => $baseDir . '/includes/admin/Promotions.php',
-    'Outofstockmanage\\Admin\\Setup' => $baseDir . '/includes/admin/Setup.php',
-    'Outofstockmanage\\Admin\\Api' => $baseDir . '/includes/admin/Api.php',
-    'Outofstockmanage\\Admin\\Message' => $baseDir . '/includes/admin/Message.php',
+    'Outofstockmanage\\Client' => $baseDir . '/includes/Client.php',
+    'Outofstockmanage\\Insights' => $baseDir . '/includes/Insights.php',
+    'Outofstockmanage\\Promotions' => $baseDir . '/includes/Promotions.php',
+    'Outofstockmanage\\Setup' => $baseDir . '/includes/Setup.php',
+    'Outofstockmanage\\Api' => $baseDir . '/includes/Api.php',
+    'Outofstockmanage\\Message' => $baseDir . '/includes/Message.php',
 );

@@ -5,7 +5,7 @@ Tags: out of stock, sold out, badge, stock, stock alert email, stock alert
 Requires at least: 4.9 or higher
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 2.1
+Stable tag: 2.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -121,6 +121,16 @@ Out of stock plugin is a quick solution for woocommerce product inventory system
 8. Out of Stock Admin Alert ⤴︎
 
 == Changelog ==
+= 2.3 = 2024-10-1
+* fix $product global variable issue created by third party
+* $wcosm_product = is_object($product) ? $product : wc_get_product() ;
+* wp_enqueue_script('wp-api-fetch'); /* wp.apiFetch */	
+
+= 2.2 = 2024-9-30
+* is_object($product) && method_exists($product, 'is_in_stock') ? $product->is_in_stock() : $product->get_stock_quantity();
+* $stock_status 	 = $product->get_stock_status();
+* execute code when (!$is_in_stock || 'outofstock' == $stock_status)
+
 = 2.1 = 2024-9-30
 * bug fix
 * method_exists($product, 'is_in_stock') check in message.php

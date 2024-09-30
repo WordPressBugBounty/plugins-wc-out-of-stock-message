@@ -9,21 +9,11 @@ class ComposerStaticInit847d824b58848b976879c8dc6b1a9bec
     public static $prefixLengthsPsr4 = array (
         'O' => 
         array (
-            'Outofstockmanage\\Public\\' => 24,
-            'Outofstockmanage\\Admin\\' => 23,
             'Outofstockmanage\\' => 17,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Outofstockmanage\\Public\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/includes/public',
-        ),
-        'Outofstockmanage\\Admin\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/includes/admin',
-        ),
         'Outofstockmanage\\' => 
         array (
             0 => __DIR__ . '/../..' . '/includes',
@@ -31,12 +21,12 @@ class ComposerStaticInit847d824b58848b976879c8dc6b1a9bec
     );
 
     public static $classMap = array (
-        'Outofstockmanage\\Admin\\Setup' => __DIR__ . '/../..' . '/includes/admin/setup.php',        
-        'Outofstockmanage\\Admin\\Adminemail' => __DIR__ . '/../..' . '/includes/admin/adminemail.php',
-        'Outofstockmanage\\Admin\\Api' => __DIR__ . '/../..' . '/includes/admin/Api.php',
-        'Outofstockmanage\\Admin\\Settings' => __DIR__ . '/../..' . '/includes/admin/Settings.php',
-        'Outofstockmanage\\Admin\\Lib_API' => __DIR__ . '/../..' . '/includes/admin/Lib_API.php',
-        'Outofstockmanage\\Admin\\Message' => __DIR__ . '/../..' . '/includes/admin/Message.php',
+        'Outofstockmanage\\Setup' => __DIR__ . '/../..' . '/includes/setup.php',        
+        'Outofstockmanage\\Adminemail' => __DIR__ . '/../..' . '/includes/adminemail.php',
+        'Outofstockmanage\\Api' => __DIR__ . '/../..' . '/includes/Api.php',
+        'Outofstockmanage\\Settings' => __DIR__ . '/../..' . '/includes/Settings.php',
+        'Outofstockmanage\\Lib_API' => __DIR__ . '/../..' . '/includes/Lib_API.php',
+        'Outofstockmanage\\Message' => __DIR__ . '/../..' . '/includes/Message.php',
 
     );
 
