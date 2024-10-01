@@ -18,8 +18,8 @@ class Message {
 
 	public function custom_out_of_stock_text($price, $product) 
 	{
-		if(is_product() || is_admin()){
-			return;
+		if( is_product() || is_admin()){
+			return $price;
 		}
 
 		if (!$product->is_in_stock()) {
@@ -40,7 +40,7 @@ class Message {
 					$out_of_stock_msg=strip_tags($out_of_stock_msg);
 				}
 			}
-			return "<span> ${out_of_stock_msg} </span><div style='display:none' class='wcosm-stock-out-msg'>${stock_text}</div>";
+			return $price . "<span style='display:block'> ${out_of_stock_msg} </span><div style='display:none' class='wcosm-stock-out-msg'>${stock_text}</div>";
 		}
 		return $price;
 	}

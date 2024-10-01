@@ -3,7 +3,7 @@
  * Plugin Name: Out Of Stock Message Manage
  * Requires Plugins: woocommerce
  * Plugin URI: https://coders-time.com/plugins/out-of-stock/
- * Version: 2.3
+ * Version: 2.4
  * Author: coderstime
  * Author URI: https://www.facebook.com/coderstime
  * Text Domain: wcosm
@@ -28,7 +28,7 @@ if ( ! defined( 'WP_WCSM_PLUGIN_PATH' ) ) {
 if ( ! defined( 'WCOSM_LIBS_PATH' ) ) {
 	define( 'WCOSM_LIBS_PATH', dirname( WCOSM_PLUGIN_FILE ) . '/includes/' );
 }
-define ( 'wcosm_ver', '2.3' );
+define ( 'wcosm_ver', '2.4' );
 define ( 'WCOSM_TEXT_DOMAIN', 'wcosm' );
 define ( 'WCOSM_PLUGIN_Name', 'Out Of Stock Manage for WooCommerce' );
 
@@ -64,11 +64,12 @@ if ( ! class_exists( 'outofstockmanage' ) ) :
 		 * Constructor.
 		*/
 		public function __construct() 
-		{
+		{	
+			/* check curreent theme is block theme or classic var_dump(wp_is_block_theme()); */			
+
 			if ( ! class_exists( 'WooCommerce' ) ) {
 				add_action( 'admin_notices', [$this,'missing_wc_notice'] );
-			}
-						
+			}			
 			
 			register_deactivation_hook( __FILE__, [$this,'outofstockmanage_deactivate'] ); /*plugin deactivation hook*/
 
@@ -135,6 +136,7 @@ if ( ! class_exists( 'outofstockmanage' ) ) :
 	        return array_merge(
 	            [
 	                '<a href="' . admin_url( 'admin.php?page=ct-out-of-stock' ) . '">' . __( 'Settings', 'wcosm' ) . '</a>',
+	                '<a href="' . admin_url( 'admin.php?page=wc-settings&tab=products&section=inventory' ) . '">' . __( 'Woo Inventory', 'wcosm' ) . '</a>',
 	                '<a href="' . esc_url( 'https://www.facebook.com/coderstime' ) . '">' . __( 'Support', 'wcosm' ) . '</a>'
 	            ], $links );
 	    }
