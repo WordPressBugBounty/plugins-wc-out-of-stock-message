@@ -3,7 +3,7 @@
  * Plugin Name: Out Of Stock Message Manage
  * Requires Plugins: woocommerce
  * Plugin URI: https://coders-time.com/plugins/out-of-stock/
- * Version: 2.4
+ * Version: 2.5
  * Author: coderstime
  * Author URI: https://www.facebook.com/coderstime
  * Text Domain: wcosm
@@ -14,6 +14,9 @@
  *
  * @package extension
  */
+
+ /* test code section */
+ /* test code section */
 
 defined( 'ABSPATH' ) || exit;
 
@@ -28,7 +31,7 @@ if ( ! defined( 'WP_WCSM_PLUGIN_PATH' ) ) {
 if ( ! defined( 'WCOSM_LIBS_PATH' ) ) {
 	define( 'WCOSM_LIBS_PATH', dirname( WCOSM_PLUGIN_FILE ) . '/includes/' );
 }
-define ( 'wcosm_ver', '2.4' );
+define ( 'wcosm_ver', '2.5' );
 define ( 'WCOSM_TEXT_DOMAIN', 'wcosm' );
 define ( 'WCOSM_PLUGIN_Name', 'Out Of Stock Manage for WooCommerce' );
 
@@ -66,13 +69,11 @@ if ( ! class_exists( 'outofstockmanage' ) ) :
 		public function __construct() 
 		{	
 			/* check curreent theme is block theme or classic var_dump(wp_is_block_theme()); */			
-
 			if ( ! class_exists( 'WooCommerce' ) ) {
 				add_action( 'admin_notices', [$this,'missing_wc_notice'] );
-			}			
-			
+			}		
+			/* both classic and block theme */
 			register_deactivation_hook( __FILE__, [$this,'outofstockmanage_deactivate'] ); /*plugin deactivation hook*/
-
 			if ( is_admin() ) {
 				add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( $this, 'action_links' ) );
 				new Setup();
@@ -81,8 +82,21 @@ if ( ! class_exists( 'outofstockmanage' ) ) :
 			new Settings(); /* public settings call */
 			$Lib_API = new Lib_API();
 			$Lib_API->init();
-			new Message(); /* show message on frontend */
+			new Message(); /* show message on frontend for block them */			
 			add_shortcode( 'wcosm_stockout_msg', [$this,'plugin_shortcode'] );
+
+			// if(wp_is_block_theme()){				
+			// }else{
+			// 	if( $this->wcosm_option('position') ) {
+			// 		add_action( $this->wcosm_option('position'),[$this,'wc_single_product_msg'], 6);
+			// 	} else {
+			// 		add_action('woocommerce_single_product_summary',[$this,'wc_single_product_msg'], 6);
+			// 	}
+			// 	/*Stock out badge*/
+			// 	add_action( 'woocommerce_before_shop_loop_item_title', [ $this, 'display_sold_out_in_loop' ], 10 );
+			// 	add_action( 'woocommerce_before_single_product_summary', [ $this, 'display_sold_out_in_single' ], 30 );
+			// 	add_filter( 'woocommerce_locate_template', [ $this, 'woocommerce_locate_template' ], 1, 3 );
+			// }
 		}
 
 		/*Get shortcode result*/
@@ -171,6 +185,173 @@ if ( ! class_exists( 'outofstockmanage' ) ) :
 			}
 			return self::$instance;
 		}
+
+		/*Display message*/
+		public function wc_single_product_msg ( ) 
+		{
+			global $post, $product;
+			$wcosm_product = is_object($product) ? $product : wc_get_product() ;
+
+			$get_saved_val 		= get_post_meta( $post->ID, '_out_of_stock_msg', true);
+			$global_checkbox 	= get_post_meta($post->ID, '_wcosm_use_global_note', true);
+			$global_note 		= get_option('woocommerce_out_of_stock_message');
+
+			$wcosm_email_admin 	= get_option('wcosm_email_admin');
+
+			if( $get_saved_val && !$wcosm_product->is_in_stock() && $global_checkbox != 'yes') {
+				printf( '<div class="outofstock-message">%s</div> <!-- /.outofstock-product_message -->', $get_saved_val );
+			}
+
+			if( $global_checkbox == 'yes' && !$wcosm_product->is_in_stock() ) {
+				printf( '<div class="outofstock-message">%s</div> <!-- /.outofstock_global-message -->', $global_note );
+			}
+
+			/*stock out message veriable product*/
+			add_filter('woocommerce_get_stock_html', function( $msg ) {
+				global $product;
+				$wcosm_product = is_object($product) ? $product : wc_get_product();				
+
+	        	if ( !$wcosm_product->is_in_stock() ) {
+	        		$msg = '';
+	        	}
+
+	        	return $msg;
+	        });
+
+	        add_filter( 'woocommerce_get_availability_class', function( $class ){
+				$stock_qty_show = $this->wcosm_option('stock_qty_show');
+
+				if ( $class ==='in-stock' && $stock_qty_show === 'no' ) {
+					$class .= ' instock_hidden';
+				}
+				return $class;			
+			});
+
+			if ( !$wcosm_product->is_in_stock() && 'false' === $wcosm_email_admin  ) {
+				$email = WC()->mailer()->emails['StockOut_Stock_Alert'];
+	        	$email->trigger( null, $wcosm_product->get_id());
+			}
+
+			if ( $wcosm_product->is_in_stock() && 'true' == $wcosm_email_admin ) {
+				update_option( 'wcosm_email_admin', 'false');
+			}			
+		}
+
+		/**
+		 * Display Sold Out badge in products loop
+		 */
+		public function display_sold_out_in_loop() 
+		{
+			if ( $this->wcosm_option( 'show_badge' ) === 'yes' ) {
+				wc_get_template( 'single-product/sold-out.php', $this->wcosm_options() );
+			}		
+		}
+
+		/**
+		 * Display Sold Out badge in single product
+		 */
+		public function display_sold_out_in_single() 
+		{
+			if ( $this->wcosm_option( 'show_badge' ) === 'yes' ) {
+				wc_get_template( 'single-product/sold-out.php', $this->wcosm_options() );
+			}
+		}
+
+		/**
+		* Get a single plugin option
+		*
+		* @return mixed
+		*/
+		public function wcosm_option( $option_name = '' ) 
+		{
+			/*Get all Plugin Options from Database.*/
+			$plugin_options = $this->wcosm_options();
+
+			/*Return single option.*/
+			if ( isset( $plugin_options[ $option_name ] ) ) {
+				return $plugin_options[ $option_name ];
+			}
+
+			return false;
+		}
+
+		/**
+		 * Get saved user settings from database or plugin defaults
+		 *
+		 * @return array
+		 */
+		public function wcosm_options() 
+		{
+			/*Merge plugin options array from database with default options array.*/
+			$plugin_options = wp_parse_args( get_option( 'woocommerce_out_of_stock', [] ), $this->plugin_default() );
+
+			/*Return plugin options.*/
+			return apply_filters( 'woocommerce_out_of_stock', $plugin_options );
+		}
+		
+		/**
+		 * Returns the default settings of the plugin
+		 *
+		 * @return array
+		 */
+		public function plugin_default() 
+		{
+			$default_options = array(
+				'color'    			=> '#fff999',
+				'textcolor'    		=> '#000',
+				'position'    		=> 'woocommerce_single_product_summary',
+				'show_badge'		=> 'yes',
+				'badge'				=> 'Sold out!',
+				'badge_bg'			=> '#77a464',
+				'badge_color'		=> '#fff',
+				'hide_sale'			=> 'yes',
+				'stock_qty_show'	=> 'yes',
+				'stock_color'		=> '#fff',
+				'stock_bgcolor'		=> '#77a464',
+				'stock_padding'		=> '20px',
+				'stock_bradius'		=> '10px',
+			);
+
+			return apply_filters( 'wcosm_default', $default_options );
+		}
+
+		/**
+		 * Locate plugin WooCommerce templates to override WooCommerce default ones
+		 *
+		 * @param $template
+		 * @param $template_name
+		 * @param $template_path
+		 *
+		 * @return string
+		 */
+		public function woocommerce_locate_template( $template, $template_name, $template_path ) {
+			global $woocommerce;
+			$_template = $template;
+			if ( ! $template_path ) {
+				$template_path = $woocommerce->template_url;
+			}
+
+			$plugin_path = untrailingslashit( plugin_dir_path( __FILE__ ) ) . '/templates/';
+
+			// Look within passed path within the theme - this is priority
+			$template = locate_template(
+				array(
+					$template_path . $template_name,
+					$template_name
+				)
+			);
+
+			if ( ! $template && file_exists( $plugin_path . $template_name ) ) {
+				$template = $plugin_path . $template_name;
+			}
+
+			if ( ! $template ) {
+				$template = $_template;
+			}
+
+			return $template;
+		}
+
 	}
 endif;
 

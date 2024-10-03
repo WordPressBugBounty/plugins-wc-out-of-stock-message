@@ -172,7 +172,7 @@ class Setup {
 	public function stockout_msg_dashboard_widget() 
 	{
 		$global_msg = get_option('woocommerce_out_of_stock_message');
-	?>
+		?>
 		<div class="rss-widget">
 			<h3> <?php esc_html_e('Stock Out Global Message :','wcosm');  ?> </h3>
 			<?php printf('<p> %s </p>',$global_msg); ?>
@@ -257,68 +257,68 @@ class Setup {
 			)
 		);	
 		$query = new \WP_Query($args);
-	?>
+		?>
 
-	<style>
-		.img_icon img{width:40px;height: 40px;}
-	</style>
+		<style>
+			.img_icon img{width:40px;height: 40px;}
+		</style>
 
-	<div class="container-fluid">
-		<div class="row mt-2">
-			<div class="col-md-12 mt-5">
-				<table id="myTable" class="display">
-					<thead>
-						<tr> 
-							<th> <?php _e('Image','wcosm'); ?> </th>
-							<th> <?php _e('Name','wcosm'); ?></th>
-							<th> <?php _e('Price','wcosm'); ?> </th>
-							<th> <?php _e('Message','wcosm'); ?> </th> 
-							<th> <?php _e('Global','wcosm'); ?> </th> 
-							<th> <?php _e('Published','wcosm'); ?> </th> 
-						</tr>
-					</thead>
-					<tbody>
-						<?php 
-						if ($query->have_posts()) {
-							while ($query->have_posts()) {
-								$query->the_post();
-								// Get product ID
-								$product_id = get_the_ID();            
-								// Get product object
-								$product = wc_get_product($product_id);
-								$product_name = esc_html($product->get_name());
-								$product_price = esc_html($product->get_price());
-								$thumbnail_html = $product->get_image('thumbnail'); // This returns the image HTML directly
-								$out_of_stock_msg = get_post_meta($product_id,'_out_of_stock_msg')[0]?:' ';
-								$wcosm_use_global = get_post_meta($product_id,'_wcosm_use_global_note');
-								if(is_array($wcosm_use_global) && !empty($wcosm_use_global)){
-									$wcosm_use_global = $wcosm_use_global[0];
-								}else{
-									$wcosm_use_global = $wcosm_use_global ? : 'No';
-								}
-								$product_published = esc_html($product->get_date_created()->date('Y/m/d \a\t H:i a')); //2024/07/13 at 7:30 am
+		<div class="container-fluid">
+			<div class="row mt-2">
+				<div class="col-md-12 mt-5">
+					<table id="myTable" class="display">
+						<thead>
+							<tr> 
+								<th> <?php _e('Image','wcosm'); ?> </th>
+								<th> <?php _e('Name','wcosm'); ?></th>
+								<th> <?php _e('Price','wcosm'); ?> </th>
+								<th> <?php _e('Message','wcosm'); ?> </th> 
+								<th> <?php _e('Global','wcosm'); ?> </th> 
+								<th> <?php _e('Published','wcosm'); ?> </th> 
+							</tr>
+						</thead>
+						<tbody>
+							<?php 
+							if ($query->have_posts()) {
+								while ($query->have_posts()) {
+									$query->the_post();
+									// Get product ID
+									$product_id = get_the_ID();            
+									// Get product object
+									$product = wc_get_product($product_id);
+									$product_name = esc_html($product->get_name());
+									$product_price = esc_html($product->get_price());
+									$thumbnail_html = $product->get_image('thumbnail'); // This returns the image HTML directly
+									$out_of_stock_msg = get_post_meta($product_id,'_out_of_stock_msg')[0]?:' ';
+									$wcosm_use_global = get_post_meta($product_id,'_wcosm_use_global_note');
+									if(is_array($wcosm_use_global) && !empty($wcosm_use_global)){
+										$wcosm_use_global = $wcosm_use_global[0];
+									}else{
+										$wcosm_use_global = $wcosm_use_global ? : 'No';
+									}
+									$product_published = esc_html($product->get_date_created()->date('Y/m/d \a\t H:i a')); //2024/07/13 at 7:30 am
 
-								echo <<<WCOSMPRODUCT
-									<tr>
-										<td class="img_icon"> $thumbnail_html </td>
-										<td> $product_name </td>
-										<td> $product_price </td>
-										<td> $out_of_stock_msg </td>
-										<td> $wcosm_use_global </td>
-										<td> $product_published </td>
-									</tr>
-									WCOSMPRODUCT;
-								}
-							wp_reset_postdata();
-						} else {
-							echo "<tr><td> ". __('No data found','wcosm') . "</td></tr>";
-						}
-						?>	
-					</tbody>
-				</table>
+									echo <<<WCOSMPRODUCT
+										<tr>
+											<td class="img_icon"> $thumbnail_html </td>
+											<td> $product_name </td>
+											<td> $product_price </td>
+											<td> $out_of_stock_msg </td>
+											<td> $wcosm_use_global </td>
+											<td> $product_published </td>
+										</tr>
+										WCOSMPRODUCT;
+									}
+								wp_reset_postdata();
+							} else {
+								echo "<tr><td> ". __('No data found','wcosm') . "</td></tr>";
+							}
+							?>	
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
-	</div>
 		<?php 
 
 	}

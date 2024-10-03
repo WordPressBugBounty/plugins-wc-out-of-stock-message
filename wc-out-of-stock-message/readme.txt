@@ -5,7 +5,7 @@ Tags: out of stock, sold out, badge, stock, stock alert email, stock alert
 Requires at least: 4.9 or higher
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 2.4
+Stable tag: 2.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -82,6 +82,12 @@ Manual installation method requires downloading the Out of Stock Message plugin 
 3. Go to Dashboard and select Out of stock menu.
 4. Go to Add/Edit product panel. Open Inventory setting of product data, select \"Out of Stock\" on \"Stock Status\" field. Then check global note or set individual note in \"Out of Stock Note\" field.
 
+== Variable Product Stock Out Message == 
+Yes, We did it. Now you can set stock out message for your variable each product. You can also show global message for variable product. If you want to show custom message then you have to check for custom message. 
+
+== Where Show Variable Message ==
+On product page, When user select Like Color and Size then If that product of stock then Stock Out message will be shown below the variable product price.
+
 == Sold out Badge == 
 We bring sold out badge on product image corner in 1.0.5 version. It will show on loop product and details product page. You can change 'sold out' text and it's Background color. Also you can change it's font color. 
 
@@ -108,8 +114,6 @@ Admin can quickly type and set out of stock message. It can be set global messag
 
 Out of stock plugin is a quick solution for woocommerce product inventory system. When a product will be out of stock it will show a custom message which is one time set from woocommerce setting page. So it's totally hassle free and easy to use. 
 
-
-
 == Screenshots ==
 1. Stock out message with bg and color settings page
 2. Stock Out Badge settings page
@@ -119,8 +123,19 @@ Out of stock plugin is a quick solution for woocommerce product inventory system
 6. Category Page Stock out badge and hide price with custom message
 7. Shop Page Stock out badge and hide price with custom message
 8. Out of Stock Admin Alert ⤴︎
+9. Variable Product Stock Out Message 
+10. Variable Product Edit Panel Screenshot
 
 == Changelog ==
+= 2.5 = 2024-10-4
+* Variable Product Custom Message Addition
+* Variable wise custom message
+* Classic theme message modification 
+* Woocommerce Latest upgrade
+
+= 2.4 = 2024-10-2
+* fix bug
+
 = 2.3 = 2024-10-1
 * product page price
 * category page price back

@@ -30,15 +30,11 @@ class Message {
 			}else{
 				$stock_text = strip_tags(get_option('woocommerce_out_of_stock_message')) ?: __('Out of Stock','wcosm');
 			}
-
+			
 			$product_id = $product->get_id();
-			$out_of_stock_msg = get_post_meta($product_id,'_out_of_stock_msg');
+			$out_of_stock_msg = get_post_meta($product_id,'_out_of_stock_msg',true);
 			if($out_of_stock_msg){
-				if(is_array($out_of_stock_msg)){
-					$out_of_stock_msg=strip_tags($out_of_stock_msg[0]);
-				}else{
-					$out_of_stock_msg=strip_tags($out_of_stock_msg);
-				}
+				$out_of_stock_msg=strip_tags($out_of_stock_msg);
 			}
 			return $price . "<span style='display:block'> ${out_of_stock_msg} </span><div style='display:none' class='wcosm-stock-out-msg'>${stock_text}</div>";
 		}
@@ -107,6 +103,7 @@ class Message {
 		}
 
 		if(is_product()){
+			
 			if( !$wcosm_product->is_in_stock() || 'outofstock' == $wcosm_product->get_stock_status() ) {
 				wp_enqueue_script(
 					'wcosm-product',
@@ -115,13 +112,13 @@ class Message {
 					filemtime( dirname( WCOSM_PLUGIN_FILE ) . '/build/frontend.js' ),
 					true
 				);
-				$global = get_post_meta($wcosm_product->get_id(),'_wcosm_use_global_note')?:'';
+				$global = get_post_meta($wcosm_product->get_id(),'_wcosm_use_global_note',true);
 				if(!$global){
 					wp_localize_script( 'wcosm-product', 'wcosm', [
 						'data'=> $wcosm_product->get_id(),
 						'nonce' => wp_create_nonce('wcosm'),
 						'pid' => $wcosm_product->get_id(), // Pass the product ID to JavaScript
-						'text'=> get_post_meta($wcosm_product->get_id(),'_out_of_stock_msg')?:'',
+						'text'=> get_post_meta($wcosm_product->get_id(),'_out_of_stock_msg', true),
 					]);
 				}
 			}
