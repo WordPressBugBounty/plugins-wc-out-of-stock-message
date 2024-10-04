@@ -44,6 +44,22 @@ use Outofstockmanage\Message;
 
 function outofstockmanage_activate() {
 	add_option( 'wcosm_active',time() );
+	$default_options = array(
+		'color'    			=> '#fff999',
+		'textcolor'    		=> '#000',
+		'position'    		=> 'woocommerce_single_product_summary',
+		'show_badge'		=> 'yes',
+		'badge'				=> 'Sold out!',
+		'badge_bg'			=> '#77a464',
+		'badge_color'		=> '#fff',
+		'hide_sale'			=> 'yes',
+		'stock_qty_show'	=> 'yes',
+		'stock_color'		=> '#fff',
+		'stock_bgcolor'		=> '#77a464',
+		'stock_padding'		=> '20px',
+		'stock_bradius'		=> '10px',
+	);
+	add_option('woocommerce_out_of_stock',$default_options);
 	if( 'no' == get_option('woocommerce_manage_stock') ){
 		update_option('woocommerce_manage_stock','yes');
 	}
