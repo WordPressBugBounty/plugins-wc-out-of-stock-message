@@ -61,7 +61,6 @@ class Adminemail extends WC_Email {
 		}
 		
 		$this->send( $this->get_recipient(), $this->get_subject(), $this->get_content(), $this->get_headers(), $this->get_attachments() );
-
 		update_option( 'wcosm_email_admin', 'true'); /* email sending status update*/
 	}
 
@@ -146,14 +145,14 @@ class Adminemail extends WC_Email {
 	{
 		/* translators: %s: list of placeholders */
 		$placeholder_text  = sprintf( __( 'Available placeholders: %s', 'woocommerce' ), '<code>' . implode( '</code>, <code>', array_keys( $this->placeholders ) ) . '</code>' );
-		$this->form_fields = array(
-			'enabled'            => array(
+		$this->form_fields = [
+			'enabled'            => [
 				'title'   => __( 'Enable/Disable', 'woocommerce' ),
 				'type'    => 'checkbox',
 				'label'   => __( 'Enable this email notification', 'woocommerce' ),
 				'default' => 'yes',
-			),
-			'recipient'          => array(
+			],
+			'recipient'          => [
 				'title'       => __( 'Recipient(s)', 'woocommerce' ),
 				'type'        => 'text',
 				/* translators: %s: WP admin email */
@@ -161,24 +160,24 @@ class Adminemail extends WC_Email {
 				'placeholder' => '',
 				'default'     => '',
 				'desc_tip'    => true,
-			),
-			'subject'            => array(
+			],
+			'subject'            => [
 				'title'       => __( 'Subject', 'woocommerce' ),
 				'type'        => 'text',
 				'desc_tip'    => true,
 				'description' => $placeholder_text,
 				'placeholder' => $this->get_default_subject(),
 				'default'     => '',
-			),
-			'heading'            => array(
+			],
+			'heading'            => [
 				'title'       => __( 'Email heading', 'woocommerce' ),
 				'type'        => 'text',
 				'desc_tip'    => true,
 				'description' => $placeholder_text,
 				'placeholder' => $this->get_default_heading(),
 				'default'     => '',
-			),
-			'additional_content' => array(
+			],
+			'additional_content' => [
 				'title'       => __( 'Additional content', 'woocommerce' ),
 				'description' => __( 'Text to appear below the main email content.', 'woocommerce' ) . ' ' . $placeholder_text,
 				'css'         => 'width:400px; height: 75px;',
@@ -186,8 +185,8 @@ class Adminemail extends WC_Email {
 				'type'        => 'textarea',
 				'default'     => $this->get_default_additional_content(),
 				'desc_tip'    => true,
-			),
-			'email_type'         => array(
+			],
+			'email_type'         => [
 				'title'       => __( 'Email type', 'woocommerce' ),
 				'type'        => 'select',
 				'description' => __( 'Choose which format of email to send.', 'woocommerce' ),
@@ -195,7 +194,7 @@ class Adminemail extends WC_Email {
 				'class'       => 'email_type wc-enhanced-select',
 				'options'     => $this->get_email_type_options(),
 				'desc_tip'    => true,
-			),
-		);
+			],
+		];
 	}
 }

@@ -78,8 +78,8 @@ class Api {
 		if( $wcosm == 'messageonly' ) {
 			$msg_updated = update_option('woocommerce_out_of_stock_message', $out_of_stock_message);
             $data = get_option('woocommerce_out_of_stock');
-            $data['stock_bgcolor']    = sanitize_text_field($request->get_param('stock_bgcolor'))?:$data['stock_bgcolor'];
-            $data['stock_color'] = sanitize_text_field($request->get_param('stock_color'))?:$data['stock_color'];
+            $data['color']      = sanitize_text_field($request->get_param('color'))?:$data['color'];
+            $data['textcolor']  = sanitize_text_field($request->get_param('textcolor'))?:$data['textcolor'];
 
             $updated = update_option('woocommerce_out_of_stock', $data);
 
@@ -108,8 +108,8 @@ class Api {
         if( $wcosm == 'badge' ) {
             $data = get_option('woocommerce_out_of_stock');
             $data['badge']          = wp_kses_post($request->get_param('badge'))?:$data['badge'];
-            // $data['badge_bg']    = sanitize_text_field($request->get_param('badge_bg'))?:$data['badge_bg'];
-            // $data['badge_color'] = sanitize_text_field($request->get_param('badge_color'))?:$data['badge_color'];
+            $data['badge_bg']       = sanitize_text_field($request->get_param('badge_bg'))?:$data['badge_bg'];
+            $data['badge_color']    = sanitize_text_field($request->get_param('badge_color'))?:$data['badge_color'];
 
             $updated = update_option('woocommerce_out_of_stock', $data);
             return new \WP_REST_Response([

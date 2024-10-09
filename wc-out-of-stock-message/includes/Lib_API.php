@@ -50,8 +50,8 @@ final class Lib_API {
      * @return void
      * @since 1.0.0
      */
-    public function init() {        
-
+    public function init() 
+    {
         if ( ! class_exists( '\Outofstockmanage\Client' ) ) {
             /** @noinspection PhpIncludeInspection */
             require_once WCOSM_LIBS_PATH . 'Client.php';

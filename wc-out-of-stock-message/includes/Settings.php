@@ -26,16 +26,15 @@ class Settings {
 
 	public function variation_data( $av_var, $product, $variation )
 	{
-		
 		if( !$av_var['is_in_stock'] ){
 			$colors = get_option('woocommerce_out_of_stock');
-			$stock_bgcolor = $colors['stock_bgcolor']?:'#eed4c1';
-			$stock_color = $colors['stock_color']?:'#000';
+			$color = $colors['color']?:$colors['stock_bgcolor'];
+			$textcolor = $colors['textcolor']?:$colors['stock_color'];
 
 			$wcosm_is_var = get_post_meta($variation->get_id(), '_wcosm_is_var', true);
 			$wcosm_msg = $wcosm_is_var ? get_post_meta($variation->get_id(), '_wcosm_var_msg', true) : get_option('woocommerce_out_of_stock_message');
 $wcosm_var_msg = <<<WCOSM_VARIATION
-<div style="background:$stock_bgcolor;clear:both;border-radius:5px;margin:10px auto 0;padding:10px 15px;color:$stock_color">
+<div style="background:$color;clear:both;border-radius:5px;margin:10px auto 10px;padding:10px 15px;color:$textcolor">
 $wcosm_msg
 </div>
 WCOSM_VARIATION;
@@ -103,7 +102,6 @@ WCOSM_VARIATION;
 	public function wcosm_textbox ( )
 	{
 		global $post;
-
 		$get_saved_val = get_post_meta($post->ID, '_out_of_stock_msg', true);
 		
 		$this->wcosm_wp_editor_with_label(
