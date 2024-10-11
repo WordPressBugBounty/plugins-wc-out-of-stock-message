@@ -15,11 +15,6 @@
  * @package wcosm
  */
 
- /* test code section */
-
-
- /* test code section */
-
 defined( 'ABSPATH' ) || exit;
 
 if ( ! defined( 'WCOSM_PLUGIN_FILE' ) ) {
@@ -602,7 +597,7 @@ if ( ! class_exists( 'outofstockmanage' ) ) :
 		 */
 		public function display_sold_out_in_loop() 
 		{
-			if ( $this->wcosm_option( 'show_badge' ) === 'yes' ) {
+			if ( in_array($this->wcosm_option( 'show_badge' ), ['yes','true',true]) ) {
 				add_filter( 'woocommerce_sale_flash', [$this,'remove_on_sale_badge_for_out_of_stock'], 10, 2);
 				wc_get_template( 'single-product/sold-out.php', $this->wcosm_options() );
 			}		
@@ -613,7 +608,7 @@ if ( ! class_exists( 'outofstockmanage' ) ) :
 		*/
 		public function display_sold_out_in_single() 
 		{
-			if ( $this->wcosm_option( 'show_badge' ) === 'yes' ) {
+			if ( in_array($this->wcosm_option( 'show_badge' ), ['yes','true',true]) ) {
 				add_filter('woocommerce_sale_flash', [$this,'remove_on_sale_badge_for_out_of_stock'], 10, 2);
 				wc_get_template( 'single-product/sold-out.php', $this->wcosm_options() );
 			}

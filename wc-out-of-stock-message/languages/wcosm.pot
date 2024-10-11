@@ -1,0 +1,658 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Out Of Stock Message Manage\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-11 07:03+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.11; wp-6.6.2\n"
+"X-Domain: wcosm"
+
+#: out-of-stock-msg.php:208
+msgid " Enable Stock Out Badge"
+msgstr ""
+
+#: out-of-stock-msg.php:292
+msgid " In Stock Quantity Message"
+msgstr ""
+
+#: templates/emails/stockout-alert-admin-email.php:42
+#, php-format
+msgid "%s Details"
+msgstr ""
+
+#. 1: Plugin Name
+#: includes/Insights.php:978
+#, php-format
+msgid "&ldquo;%s&rdquo; Uninstall Confirmation"
+msgstr ""
+
+#: includes/Lib_API.php:185
+msgid "24 hours"
+msgstr ""
+
+#: includes/adminemail.php:75
+msgid "A Product stock out on {site_title}"
+msgstr ""
+
+#: includes/adminemail.php:34
+msgid "Admin will get an alert when a product will be stock out"
+msgstr ""
+
+#: includes/Insights.php:476
+msgid "Allow"
+msgstr ""
+
+#: out-of-stock-msg.php:227
+msgid "Background Color for badge"
+msgstr ""
+
+#: out-of-stock-msg.php:190
+msgid "Background Color for out of stock message."
+msgstr ""
+
+#: out-of-stock-msg.php:226
+msgid "Badge BG Color"
+msgstr ""
+
+#: includes/Api.php:116
+msgid "Badge Data updated successfully"
+msgstr ""
+
+#: out-of-stock-msg.php:244
+msgid "Badge Position"
+msgstr ""
+
+#: out-of-stock-msg.php:235
+msgid "Badge Text Color"
+msgstr ""
+
+#: includes/Insights.php:1029 includes/Insights.php:1066
+msgid "Cancel"
+msgstr ""
+
+#: includes/setup.php:181
+msgid "Change Global Message"
+msgstr ""
+
+#: out-of-stock-msg.php:627 includes/Lib_API.php:103
+msgid "Cloning is forbidden."
+msgstr ""
+
+#: includes/Insights.php:983 includes/Insights.php:1036
+msgid "Close"
+msgstr ""
+
+#. Author of the plugin
+msgid "coderstime"
+msgstr ""
+
+#: includes/Insights.php:770
+msgid "Could you tell us a bit more whats not working?"
+msgstr ""
+
+#: includes/Insights.php:794
+msgid "Could you tell us a bit more?"
+msgstr ""
+
+#: includes/Insights.php:764
+msgid "Could you tell us more about that feature?"
+msgstr ""
+
+#: includes/Api.php:124
+msgid "Data reached successfully not saved any"
+msgstr ""
+
+#: out-of-stock-msg.php:260
+msgid "Do you want to hide the \"Sale\" badge when a product is sold out?"
+msgstr ""
+
+#: includes/Lib_API.php:190
+msgid "Documentation"
+msgstr ""
+
+#: includes/Insights.php:998
+msgid "Email"
+msgstr ""
+
+#: includes/Settings.php:59
+msgid "Enter text to show when this product will be out of stock"
+msgstr ""
+
+#: templates/emails/stockout-alert-admin-email.php:66
+#, php-format
+msgid "Following is the %s link : "
+msgstr ""
+
+#: includes/Api.php:60
+msgid "Form Verification error"
+msgstr ""
+
+#: includes/Lib_API.php:212
+msgid "Get Support"
+msgstr ""
+
+#: includes/setup.php:276
+msgid "Global"
+msgstr ""
+
+#: templates/emails/stockout-alert-admin-email.php:21
+#: templates/emails/plain/stockout-alert-admin-email.php:19
+#, php-format
+msgid "Hi admin. One of your %s sold out"
+msgstr ""
+
+#: out-of-stock-msg.php:259
+msgid "Hide Sale Badge?"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://coders-time.com/plugins/out-of-stock/"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.facebook.com/coderstime"
+msgstr ""
+
+#: includes/Insights.php:750
+msgid "I couldn't understand how to make it work"
+msgstr ""
+
+#: includes/Insights.php:756
+msgid "I found a better plugin"
+msgstr ""
+
+#: includes/Insights.php:1064
+msgid "I rather wouldn't say"
+msgstr ""
+
+#: includes/Insights.php:1035
+msgid "If you have a moment, please let us know why you are deactivating:"
+msgstr ""
+
+#: includes/setup.php:272
+msgid "Image"
+msgstr ""
+
+#: out-of-stock-msg.php:590
+msgid "In stock background color"
+msgstr ""
+
+#: out-of-stock-msg.php:301
+msgid "In Stock Quantity Color"
+msgstr ""
+
+#: out-of-stock-msg.php:312
+msgid "In Stock Qunatity Background Color"
+msgstr ""
+
+#: out-of-stock-msg.php:302
+msgid "In Stock Qunatity Color"
+msgstr ""
+
+#: out-of-stock-msg.php:568
+msgid "In Stock Text color"
+msgstr ""
+
+#: includes/Insights.php:1054
+msgid "In trouble? Please submit a support request."
+msgstr ""
+
+#: includes/Insights.php:816 includes/Promotions.php:326
+msgid "Invalid Request"
+msgstr ""
+
+#: includes/Insights.php:774
+msgid "It's not what I was looking for"
+msgstr ""
+
+#: out-of-stock-msg.php:253
+msgid "Left Top Position"
+msgstr ""
+
+#: includes/Insights.php:1018 includes/setup.php:193 includes/setup.php:237
+#: includes/setup.php:275
+msgid "Message"
+msgstr ""
+
+#: includes/Api.php:87
+msgid "Message data updated successfully"
+msgstr ""
+
+#: out-of-stock-msg.php:181 out-of-stock-msg.php:469
+msgid "Message for out of stock product."
+msgstr ""
+
+#: includes/Promotions.php:338
+msgid "Method must be invoked inside admin_init action"
+msgstr ""
+
+#: includes/Insights.php:957
+msgid "Missing Required Fields."
+msgstr ""
+
+#: includes/Insights.php:992 includes/setup.php:273
+msgid "Name"
+msgstr ""
+
+#: includes/setup.php:314
+msgid "No data found"
+msgstr ""
+
+#: includes/Insights.php:471
+msgid "No sensitive data is tracked."
+msgstr ""
+
+#: includes/Insights.php:475
+msgid "No thanks"
+msgstr ""
+
+#: includes/Insights.php:1056
+msgid "Not Interested"
+msgstr ""
+
+#: includes/Lib_API.php:229
+msgid "Number of active and inactive plugins."
+msgstr ""
+
+#: includes/Insights.php:689
+msgid "Once Weekly"
+msgstr ""
+
+#: includes/Insights.php:1057
+msgid "Open Support Ticket"
+msgstr ""
+
+#: includes/Insights.php:792
+msgid "Other"
+msgstr ""
+
+#. Page title
+#: includes/Message.php:31 includes/setup.php:127
+msgid "Out of Stock"
+msgstr ""
+
+#: includes/adminemail.php:33
+msgid "Out of Stock Admin Alert"
+msgstr ""
+
+#: out-of-stock-msg.php:490 out-of-stock-msg.php:512
+msgid "Out of Stock Background Color"
+msgstr ""
+
+#: out-of-stock-msg.php:189
+msgid "Out of Stock BG Color"
+msgstr ""
+
+#: out-of-stock-msg.php:269 out-of-stock-msg.php:545
+msgid "Out of Stock Display Position"
+msgstr ""
+
+#: includes/setup.php:126
+msgid "Out of Stock Manage Page"
+msgstr ""
+
+#. Base ID
+#: includes/widget-wcosm.php:16
+msgid "Out Of Stock Message"
+msgstr ""
+
+#: out-of-stock-msg.php:180 out-of-stock-msg.php:468
+msgid "Out of Stock Message"
+msgstr ""
+
+#: includes/Settings.php:56
+msgid "Out of Stock Message for this variation product"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Out Of Stock Message for WooCommerce plugin for those stock out or sold out "
+"message for product details page. Also message can be show with shortcode "
+"support. Message can be set for specific \t\t\t\t\t\t   product or globally "
+"for all products when it sold out. You can change message background and "
+"text \t\t\t\t\t\tcolor from woocommerce inventory settings and customizer "
+"woocommerce section. It will show message on single product where admin "
+"select to show. Admin also will be notified by email when product stock out."
+msgstr ""
+
+#. Name of the plugin
+msgid "Out Of Stock Message Manage"
+msgstr ""
+
+#: includes/widget-wcosm.php:17
+msgid "Out of Stock Product Message Settings"
+msgstr ""
+
+#: out-of-stock-msg.php:198
+msgid "Out of Stock Text Color"
+msgstr ""
+
+#: includes/Lib_API.php:188
+msgid ""
+"Please Follow the email and Coders Time Support Team will get back with you "
+"shortly."
+msgstr ""
+
+#. 1: Link to the Trams And Condition Page, 2: Link to the Privacy Policy Page
+#: includes/Lib_API.php:197
+#, php-format
+msgid "Please read our %1$s and %2$s"
+msgstr ""
+
+#: includes/Insights.php:878
+msgid "Please try again after sometime."
+msgstr ""
+
+#: includes/setup.php:274 templates/emails/stockout-alert-admin-email.php:49
+msgid "Price"
+msgstr ""
+
+#: includes/Lib_API.php:195
+msgid "Privacy Policy"
+msgstr ""
+
+#: includes/Insights.php:1157
+msgid "Processing..."
+msgstr ""
+
+#: includes/setup.php:191 includes/setup.php:235
+msgid "Product"
+msgstr ""
+
+#. Page title
+#: includes/setup.php:138
+msgid "Products"
+msgstr ""
+
+#: includes/Promotions.php:324
+msgid "Promo hidden"
+msgstr ""
+
+#: includes/Promotions.php:82
+msgid "Promotion Source URL Not Set. see Promotions::set_source( $URL )"
+msgstr ""
+
+#: includes/setup.php:277
+msgid "Published"
+msgstr ""
+
+#: out-of-stock-msg.php:252
+msgid "Right Top Position"
+msgstr ""
+
+#: out-of-stock-msg.php:245
+msgid "Select Where show Badge text"
+msgstr ""
+
+#: includes/Insights.php:1028
+msgid "Send Message"
+msgstr ""
+
+#: includes/Insights.php:327
+msgid "Server environment details (php, mysql, server, WordPress versions)."
+msgstr ""
+
+#: out-of-stock-msg.php:140
+msgid "Settings"
+msgstr ""
+
+#: includes/Api.php:102
+msgid "Settings Data updated successfully"
+msgstr ""
+
+#: out-of-stock-msg.php:291
+msgid "Show Stock Quantity"
+msgstr ""
+
+#: includes/Lib_API.php:228
+msgid "Site name, language and url."
+msgstr ""
+
+#: includes/Insights.php:877
+msgid "Something Went Wrong."
+msgstr ""
+
+#: includes/Insights.php:951
+msgid "Something Went Wrong. Please Try Again After Sometime."
+msgstr ""
+
+#: includes/Lib_API.php:211
+msgid ""
+"Something Went Wrong. Please Try The Support Ticket Form On Our Website."
+msgstr ""
+
+#: out-of-stock-msg.php:457
+msgid ""
+"Sorry, This product now out of stock, Check again later. (global Message)"
+msgstr ""
+
+#: includes/setup.php:192 includes/setup.php:236
+msgid "Stock"
+msgstr ""
+
+#: out-of-stock-msg.php:589
+msgid "Stock Background Color"
+msgstr ""
+
+#: includes/widget-wcosm.php:86
+msgid "Stock Out"
+msgstr ""
+
+#: out-of-stock-msg.php:217
+msgid "Stock Out Badge"
+msgstr ""
+
+#: out-of-stock-msg.php:207
+msgid "Stock Out Badge Show"
+msgstr ""
+
+#: out-of-stock-msg.php:218
+msgid "Stock Out Badge Text"
+msgstr ""
+
+#: includes/setup.php:177
+msgid "Stock Out Global Message :"
+msgstr ""
+
+#: includes/setup.php:163
+msgid "Stock Out Manage"
+msgstr ""
+
+#: out-of-stock-msg.php:448
+msgid "Stock Out Message"
+msgstr ""
+
+#: out-of-stock-msg.php:491 out-of-stock-msg.php:513
+msgid "Stock Out message display are Background Color"
+msgstr ""
+
+#. The slug name for the parent menu
+#: includes/setup.php:137
+msgid "Stock Out Products"
+msgstr ""
+
+#: out-of-stock-msg.php:311
+msgid "Stock Quantity Background"
+msgstr ""
+
+#: out-of-stock-msg.php:567
+msgid "Stock Text Color"
+msgstr ""
+
+#: includes/Insights.php:1005
+msgid "Subject"
+msgstr ""
+
+#: includes/Insights.php:1065
+msgid "Submit & Deactivate"
+msgstr ""
+
+#: includes/Insights.php:982
+msgid "Submit Support Ticket."
+msgstr ""
+
+#: out-of-stock-msg.php:142
+msgid "Support"
+msgstr ""
+
+#: includes/Lib_API.php:213
+msgid "Support Ticket form will open in new tab in 5 seconds."
+msgstr ""
+
+#: includes/Insights.php:786
+msgid "Temporary deactivation for debugging"
+msgstr ""
+
+#: includes/Lib_API.php:194
+msgid "Terms & Conditions"
+msgstr ""
+
+#: out-of-stock-msg.php:236
+msgid "Text Color for badge."
+msgstr ""
+
+#: out-of-stock-msg.php:199
+msgid "Text Color for out of stock message."
+msgstr ""
+
+#: includes/Insights.php:934 includes/Lib_API.php:183
+msgid "Thank you -- Support Ticket Submitted."
+msgstr ""
+
+#: includes/Insights.php:780
+msgid "The plugin didn't work as expected"
+msgstr ""
+
+#: includes/Insights.php:762
+msgid "The plugin is great, but I need specific feature that you don't support"
+msgstr ""
+
+#: includes/Insights.php:768
+msgid "The plugin is not working"
+msgstr ""
+
+#: out-of-stock-msg.php:270
+msgid "This controls the position of out of stock message."
+msgstr ""
+
+#: includes/Settings.php:71 includes/Settings.php:121
+msgid "Tick this if you want to show global out of stock message."
+msgstr ""
+
+#: out-of-stock-msg.php:635
+msgid "Unserializing instances of this class is forbidden."
+msgstr ""
+
+#: includes/Settings.php:67
+msgid "Use Custom Message"
+msgstr ""
+
+#: includes/Settings.php:117
+msgid "Use Global Message"
+msgstr ""
+
+#: includes/Api.php:69
+msgid "User Permission error"
+msgstr ""
+
+#: includes/Lib_API.php:191
+msgid "Video Tutorials"
+msgstr ""
+
+#. 1: plugin name
+#: includes/Insights.php:462
+#, php-format
+msgid ""
+"Want to help make %1$s even more awesome? Allow %1$s to collect non-"
+"sensitive diagnostic data and usage information."
+msgstr ""
+
+#: out-of-stock-msg.php:281 out-of-stock-msg.php:535
+msgid "WC After Single Product"
+msgstr ""
+
+#: out-of-stock-msg.php:279 out-of-stock-msg.php:533
+msgid "WC After Single Product Summary"
+msgstr ""
+
+#: out-of-stock-msg.php:280 out-of-stock-msg.php:534
+msgid "WC Before Single Product"
+msgstr ""
+
+#: out-of-stock-msg.php:278 out-of-stock-msg.php:532
+msgid "WC Before Single Product Summary"
+msgstr ""
+
+#: out-of-stock-msg.php:283 out-of-stock-msg.php:537
+msgid "WC product meta end"
+msgstr ""
+
+#: out-of-stock-msg.php:282 out-of-stock-msg.php:536
+msgid "WC product meta start"
+msgstr ""
+
+#: out-of-stock-msg.php:284 out-of-stock-msg.php:285 out-of-stock-msg.php:538
+#: out-of-stock-msg.php:539
+msgid "WC product thumbnails"
+msgstr ""
+
+#: out-of-stock-msg.php:277 out-of-stock-msg.php:531
+msgid "WC Single Product Summary"
+msgstr ""
+
+#: includes/Insights.php:1011
+msgid "Website"
+msgstr ""
+
+#: includes/adminemail.php:86
+msgid "Welcome to {site_title}"
+msgstr ""
+
+#: includes/Insights.php:782
+msgid "What did you expect?"
+msgstr ""
+
+#: includes/Insights.php:470
+msgid "what we collect"
+msgstr ""
+
+#: includes/Insights.php:758
+msgid "Which plugin?"
+msgstr ""
+
+#: out-of-stock-msg.php:141
+msgid "Woo Inventory"
+msgstr ""
+
+#: includes/Insights.php:752
+msgid "Would you like us to assist you?"
+msgstr ""
+
+#: out-of-stock-msg.php:175
+msgid "You can change below settings with separate menu."
+msgstr ""
+
+#. %s: Approx. time to response after ticket submission.
+#: includes/Lib_API.php:187
+#, php-format
+msgid ""
+"You will receive an email notification from \"coderstime@gmail.com\" in your "
+"inbox within %s."
+msgstr ""
+
+#: includes/Lib_API.php:230
+msgid "Your name and email address."
+msgstr ""
+
+#: includes/Lib_API.php:184
+msgid "Your ticket has been successfully submitted."
+msgstr ""

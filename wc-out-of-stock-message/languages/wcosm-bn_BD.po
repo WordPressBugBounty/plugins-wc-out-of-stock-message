@@ -1,0 +1,615 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Out Of Stock Message Manage\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-11 07:03+0000\n"
+"PO-Revision-Date: 2024-10-11 07:21+0000\n"
+"Last-Translator: Lincoln Mahmud\n"
+"Language-Team: Bengali (Bangladesh)\n"
+"Language: bn_BD\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.11; wp-6.6.2\n"
+"X-Domain: wcosm"
+
+#: out-of-stock-msg.php:208
+msgid " Enable Stock Out Badge"
+msgstr "স্টক আউট ব্যাজ এনাবল করুন"
+
+#: out-of-stock-msg.php:292
+msgid " In Stock Quantity Message"
+msgstr "ইন স্টক কোয়ান্টিটি বার্তা"
+
+#: templates/emails/stockout-alert-admin-email.php:42
+#, php-format
+msgid "%s Details"
+msgstr "%s বিস্তারিত"
+
+#. 1: Plugin Name
+#: includes/Insights.php:978
+#, php-format
+msgid "&ldquo;%s&rdquo; Uninstall Confirmation"
+msgstr "&ldquo;%s&rdquo;  আনইন্সটল নিশ্চিত করন"
+
+#: includes/Lib_API.php:185
+msgid "24 hours"
+msgstr "২৪ ঘণ্টা"
+
+#: includes/adminemail.php:75
+msgid "A Product stock out on {site_title}"
+msgstr "{site_title} পণ্যটি স্টক আউট হয়ে গেছে"
+
+#: includes/adminemail.php:34
+msgid "Admin will get an alert when a product will be stock out"
+msgstr "পণ্য স্টক আউট হলে এডমিন নোটিশ পাবেন"
+
+#: includes/Insights.php:476
+msgid "Allow"
+msgstr "এলাউ"
+
+#: out-of-stock-msg.php:227
+msgid "Background Color for badge"
+msgstr "ব্যাজের ব্যাকগ্রাউন্ড কালার"
+
+#: out-of-stock-msg.php:190
+msgid "Background Color for out of stock message."
+msgstr "স্টক আউট মেসেজের ব্যাকগ্রাউন্ড মেসেজ"
+
+#: out-of-stock-msg.php:226
+msgid "Badge BG Color"
+msgstr "ব্যাজের ব্যাকগ্রাউন্ড কালার"
+
+msgid "Badge Data updated successfully"
+msgstr "ব্যাজ ডাটা সফলভাবে আপডেট করা হয়েছে"
+
+#: out-of-stock-msg.php:244
+msgid "Badge Position"
+msgstr "ব্যাজ এর পজিশন"
+
+#: out-of-stock-msg.php:235
+msgid "Badge Text Color"
+msgstr "ব্যাজ এর ফন্ট কালার"
+
+#: includes/Insights.php:1029 includes/Insights.php:1066
+msgid "Cancel"
+msgstr "বাতিল"
+
+msgid "Change Global Message"
+msgstr "গ্লোবাল বার্তা পরিবর্তন করুন"
+
+#: out-of-stock-msg.php:627 includes/Lib_API.php:103
+msgid "Cloning is forbidden."
+msgstr "ক্লোনিং নিষিদ্ধ"
+
+#: includes/Insights.php:983 includes/Insights.php:1036
+msgid "Close"
+msgstr "বন্ধ"
+
+#. Author of the plugin
+msgid "coderstime"
+msgstr "কোডার্সটাইম"
+
+#: includes/Insights.php:770
+msgid "Could you tell us a bit more whats not working?"
+msgstr "কি কাজ করছে না সে সম্পর্কে বিস্তারিত বলবেন ?"
+
+#: includes/Insights.php:794
+msgid "Could you tell us a bit more?"
+msgstr "একটু বিস্তারিত বলবেন ?"
+
+#: includes/Insights.php:764
+msgid "Could you tell us more about that feature?"
+msgstr "ফিচার সম্পর্কে বিস্তারিত বলবেন ?"
+
+#: includes/Api.php:124
+msgid "Data reached successfully not saved any"
+msgstr "সার্ভার পর্যন্ত তথ্য পৌছেছে"
+
+#: out-of-stock-msg.php:260
+msgid "Do you want to hide the \"Sale\" badge when a product is sold out?"
+msgstr "পণ্য স্টক আউট হয়ে গেলে সেল ব্যাজটি গোপন করবেন ?"
+
+#: includes/Lib_API.php:190
+msgid "Documentation"
+msgstr "ডকুমেন্টেশন"
+
+#: includes/Insights.php:998
+msgid "Email"
+msgstr "ইমেইল"
+
+#: includes/Settings.php:59
+msgid "Enter text to show when this product will be out of stock"
+msgstr "পণ্য স্টক আউট হয়ে গেলে যে তথ্য দেখাবে তা এখানে দিন"
+
+#: templates/emails/stockout-alert-admin-email.php:66
+#, php-format
+msgid "Following is the %s link : "
+msgstr "লিংকটি ফলো করুন %s লিংক : "
+
+#: includes/Api.php:60
+msgid "Form Verification error"
+msgstr "ফর্ম ভেরিফিকেশন ইরর"
+
+#: includes/Lib_API.php:212
+msgid "Get Support"
+msgstr "সাপোর্ট নিন"
+
+#: includes/setup.php:276
+msgid "Global"
+msgstr "গ্লোবাল"
+
+#: templates/emails/stockout-alert-admin-email.php:21
+#: templates/emails/plain/stockout-alert-admin-email.php:19
+#, php-format
+msgid "Hi admin. One of your %s sold out"
+msgstr "হায় এডমিন। %s এর মধ্যে একটি পণ্য বিক্রি হয়ে গেছে। "
+
+#: out-of-stock-msg.php:259
+msgid "Hide Sale Badge?"
+msgstr "সেল ব্যাজ গোপন করবেন ? "
+
+#. URI of the plugin
+msgid "https://coders-time.com/plugins/out-of-stock/"
+msgstr "https://coders-time.com/plugins/out-of-stock/"
+
+#. Author URI of the plugin
+msgid "https://www.facebook.com/coderstime"
+msgstr "https://www.facebook.com/coderstime"
+
+msgid "I couldn't understand how to make it work"
+msgstr "এটা কিভাবে কাজ করে আমি বুঝতেছি না"
+
+#: includes/Insights.php:756
+msgid "I found a better plugin"
+msgstr "ভালো একটা প্লাগিন পেয়েছি"
+
+#: includes/Insights.php:1064
+msgid "I rather wouldn't say"
+msgstr "আমি বলতে চাইনা।"
+
+#: includes/Insights.php:1035
+msgid "If you have a moment, please let us know why you are deactivating:"
+msgstr "আপনার যদি সময় থাকে বলবেন কি কেন আপনি ডিঅ্যাক্টিভ করতেছেন"
+
+#: includes/setup.php:272
+msgid "Image"
+msgstr "ছবি"
+
+#: out-of-stock-msg.php:590
+msgid "In stock background color"
+msgstr "ইন স্টক ব্যাকগ্রাউন্ড কালার"
+
+#: out-of-stock-msg.php:301
+msgid "In Stock Quantity Color"
+msgstr "ইন স্টক কোয়ান্টিটি কালার"
+
+#: out-of-stock-msg.php:312
+msgid "In Stock Qunatity Background Color"
+msgstr "ইন স্টক কোয়ান্টিটি ব্যাকগ্রাউন্ড কালার"
+
+#: out-of-stock-msg.php:302
+msgid "In Stock Qunatity Color"
+msgstr "ইন স্টক কোয়ান্টিটি কালার"
+
+#: out-of-stock-msg.php:568
+msgid "In Stock Text color"
+msgstr "ইন স্টক টেক্সট কালার"
+
+#: includes/Insights.php:1054
+msgid "In trouble? Please submit a support request."
+msgstr "সমস্যায় পড়েছেন ? সাপোর্টের জন্য অনুরোধ করুন"
+
+#: includes/Insights.php:816 includes/Promotions.php:326
+msgid "Invalid Request"
+msgstr "ইনভ্যালিড রিকোয়েস্ট"
+
+#: includes/Insights.php:774
+msgid "It's not what I was looking for"
+msgstr "আমি যা খুঁজছি এটা তা না"
+
+#: out-of-stock-msg.php:253
+msgid "Left Top Position"
+msgstr "বামের উপরের পজিশন"
+
+#: includes/Insights.php:1018 includes/setup.php:193 includes/setup.php:237
+#: includes/setup.php:275
+msgid "Message"
+msgstr "মেসেজ"
+
+#: includes/Api.php:87
+msgid "Message data updated successfully"
+msgstr "মেসেজ এর তথ্য আপডেট করা হয়েছে"
+
+#: out-of-stock-msg.php:181 out-of-stock-msg.php:469
+msgid "Message for out of stock product."
+msgstr "স্টক আউট এর মেসেজ"
+
+#: includes/Promotions.php:338
+msgid "Method must be invoked inside admin_init action"
+msgstr "মেথডট এডমিন-ইনিট এর মধ্যে ইনভোক করতে হবে।"
+
+#: includes/Insights.php:957
+msgid "Missing Required Fields."
+msgstr "জরুরি ফিল্ডগুলা নাই"
+
+#: includes/Insights.php:992 includes/setup.php:273
+msgid "Name"
+msgstr "নাম"
+
+#: includes/setup.php:314
+msgid "No data found"
+msgstr "পাওয়া যায়নি"
+
+#: includes/Insights.php:471
+msgid "No sensitive data is tracked."
+msgstr "নিরাপত্তাজনিত তথ্য নেয়া হয়না"
+
+#: includes/Insights.php:475
+msgid "No thanks"
+msgstr "না, ধন্যবাদ"
+
+#: includes/Insights.php:1056
+msgid "Not Interested"
+msgstr "আগ্রহী না"
+
+#: includes/Lib_API.php:229
+msgid "Number of active and inactive plugins."
+msgstr "একটিভ ও ইনাক্টিভ প্লাগিন সংখ্যা"
+
+#: includes/Insights.php:689
+msgid "Once Weekly"
+msgstr "সপ্তাহে একবার"
+
+#: includes/Insights.php:1057
+msgid "Open Support Ticket"
+msgstr "সাপোর্ট টিকেট"
+
+#: includes/Insights.php:792
+msgid "Other"
+msgstr "অন্যান্য"
+
+#. Page title
+#: includes/Message.php:31 includes/setup.php:127
+msgid "Out of Stock"
+msgstr "স্টক আউট"
+
+#: includes/adminemail.php:33
+msgid "Out of Stock Admin Alert"
+msgstr "স্টক আউট এডমিন সতর্কতা"
+
+#: out-of-stock-msg.php:490 out-of-stock-msg.php:512
+msgid "Out of Stock Background Color"
+msgstr "স্টক আউট ব্যাকগ্রাউন্ড রং"
+
+#: out-of-stock-msg.php:189
+msgid "Out of Stock BG Color"
+msgstr "স্টক আউট ব্যাকগ্রাউট রং"
+
+#: out-of-stock-msg.php:269 out-of-stock-msg.php:545
+msgid "Out of Stock Display Position"
+msgstr "স্টক আউট যেখানে দেখাবে"
+
+#: includes/setup.php:126
+msgid "Out of Stock Manage Page"
+msgstr "স্টক আউট ম্যানেজ করার পাতা"
+
+#. Base ID
+#: includes/widget-wcosm.php:16
+msgid "Out Of Stock Message"
+msgstr "স্টক আউট বার্তা"
+
+#: out-of-stock-msg.php:180 out-of-stock-msg.php:468
+msgid "Out of Stock Message"
+msgstr "স্টক আউট বার্তা"
+
+#: includes/Settings.php:56
+msgid "Out of Stock Message for this variation product"
+msgstr "এই ভ্যারিয়েশন পণ্যের স্টক আউট বার্তা"
+
+#. Name of the plugin
+msgid "Out Of Stock Message Manage"
+msgstr "স্টক আউট বার্তা পরিচালনা"
+
+#: includes/widget-wcosm.php:17
+msgid "Out of Stock Product Message Settings"
+msgstr "স্টক আউট পণ্যের মেসেজ সেটিংস"
+
+#: out-of-stock-msg.php:198
+msgid "Out of Stock Text Color"
+msgstr "স্টক আউট বার্তার রং"
+
+msgid ""
+"Please Follow the email and Coders Time Support Team will get back with you "
+"shortly."
+msgstr "অনুগ্রহ করে ইমেইল এবং কোডার্সটাইম সাপোর্টে যোগাযোগ করুন"
+
+#. 1: Link to the Trams And Condition Page, 2: Link to the Privacy Policy Page
+#: includes/Lib_API.php:197
+#, php-format
+msgid "Please read our %1$s and %2$s"
+msgstr "অনুগ্রহ করে আমাদের %1$s এবং %2$s পড়ুন"
+
+#: includes/Insights.php:878
+msgid "Please try again after sometime."
+msgstr "অনুগ্রহ করে একটু পরে চেষ্টা করুন"
+
+#: includes/setup.php:274 templates/emails/stockout-alert-admin-email.php:49
+msgid "Price"
+msgstr "দাম"
+
+#: includes/Lib_API.php:195
+msgid "Privacy Policy"
+msgstr "গোপনীয় নিয়মনীতি"
+
+#: includes/Insights.php:1157
+msgid "Processing..."
+msgstr "প্রসেসিং..."
+
+#: includes/setup.php:191 includes/setup.php:235
+msgid "Product"
+msgstr "পণ্য"
+
+#. Page title
+#: includes/setup.php:138
+msgid "Products"
+msgstr "পণ্য সমুহ"
+
+#: includes/Promotions.php:324
+msgid "Promo hidden"
+msgstr "প্রোমো গোপন"
+
+#: includes/Promotions.php:82
+msgid "Promotion Source URL Not Set. see Promotions::set_source( $URL )"
+msgstr "প্রোমোশন সোর্স লিংক সেট করা হয়নি। "
+
+#: includes/setup.php:277
+msgid "Published"
+msgstr "প্রকাশিত"
+
+#: out-of-stock-msg.php:252
+msgid "Right Top Position"
+msgstr "ডানের উপরের পজিশন"
+
+#: out-of-stock-msg.php:245
+msgid "Select Where show Badge text"
+msgstr "ব্যাজ এর তথ্য যেখানে দেখানে তা ঠিক করুন"
+
+#: includes/Insights.php:1028
+msgid "Send Message"
+msgstr "বার্তা পাঠান"
+
+#: includes/Insights.php:327
+msgid "Server environment details (php, mysql, server, WordPress versions)."
+msgstr "সার্ভার সফটওয়ার তথ্য"
+
+#: out-of-stock-msg.php:140
+msgid "Settings"
+msgstr "সেটিংস"
+
+#: includes/Api.php:102
+msgid "Settings Data updated successfully"
+msgstr "সেটিংস তথ্য আপডেট করা হয়েছে"
+
+#: out-of-stock-msg.php:291
+msgid "Show Stock Quantity"
+msgstr "স্টক সংখ্যা"
+
+#: includes/Lib_API.php:228
+msgid "Site name, language and url."
+msgstr "ওয়েবসাইটের নাম, ভাষা, লিংক"
+
+#: includes/Insights.php:877
+msgid "Something Went Wrong."
+msgstr "কিছু একটা ক্রটি হয়েছে"
+
+#: includes/Insights.php:951
+msgid "Something Went Wrong. Please Try Again After Sometime."
+msgstr "কিছু একটা ত্রুটি হয়েছে, কিছুক্ষণ পর আবার চেষ্টা করুন"
+
+#: includes/setup.php:192 includes/setup.php:236
+msgid "Stock"
+msgstr "স্টক"
+
+#: out-of-stock-msg.php:589
+msgid "Stock Background Color"
+msgstr "স্টক ব্যাকগ্রাউন্ড রং"
+
+#: includes/widget-wcosm.php:86
+msgid "Stock Out"
+msgstr "স্টক আউট"
+
+#: out-of-stock-msg.php:217
+msgid "Stock Out Badge"
+msgstr "স্টক আউট ব্যাজ"
+
+#: out-of-stock-msg.php:207
+msgid "Stock Out Badge Show"
+msgstr "স্টক আউট ব্যাজ"
+
+#: out-of-stock-msg.php:218
+msgid "Stock Out Badge Text"
+msgstr "স্টক আউট ব্যাজ বার্তা"
+
+#: includes/setup.php:177
+msgid "Stock Out Global Message :"
+msgstr "স্টক আউট গ্লোবাল মেসেজ"
+
+#: includes/setup.php:163
+msgid "Stock Out Manage"
+msgstr "স্টক আউট পরিচালনা"
+
+#: out-of-stock-msg.php:448
+msgid "Stock Out Message"
+msgstr "স্টক আউট বার্তা"
+
+#: out-of-stock-msg.php:491 out-of-stock-msg.php:513
+msgid "Stock Out message display are Background Color"
+msgstr "স্টক আউট বার্তা দেখানো এবং ব্যাকগ্রাউন্ড রং"
+
+#. The slug name for the parent menu
+#: includes/setup.php:137
+msgid "Stock Out Products"
+msgstr "স্টক আউট পণ্য সমূহ"
+
+#: out-of-stock-msg.php:311
+msgid "Stock Quantity Background"
+msgstr "স্টক কোয়ান্টিটি ব্যাকগ্রাউন্ড"
+
+#: out-of-stock-msg.php:567
+msgid "Stock Text Color"
+msgstr "স্টক বার্তার রং"
+
+#: includes/Insights.php:1005
+msgid "Subject"
+msgstr "সাবজেক্ট"
+
+#: includes/Insights.php:1065
+msgid "Submit & Deactivate"
+msgstr "সাবমিট এবং ডিঅ্যাক্টিভ"
+
+#: includes/Insights.php:982
+msgid "Submit Support Ticket."
+msgstr "সাপোর্ট টিকেট সাবমিট করুন"
+
+#: out-of-stock-msg.php:142
+msgid "Support"
+msgstr "সাপোর্ট"
+
+#: includes/Lib_API.php:213
+msgid "Support Ticket form will open in new tab in 5 seconds."
+msgstr "সাপোর্ট টিকেট নতুন ট্যাবে ওপেন হবে"
+
+#: includes/Insights.php:786
+msgid "Temporary deactivation for debugging"
+msgstr "ডিবাগিং এর জন্য সাময়িক ডিঅ্যাক্টিভ করা হচ্ছে"
+
+#: includes/Lib_API.php:194
+msgid "Terms & Conditions"
+msgstr "টার্মস কন্ডিশন"
+
+#: out-of-stock-msg.php:236
+msgid "Text Color for badge."
+msgstr "ব্যাজের ফন্ট রং"
+
+#: out-of-stock-msg.php:199
+msgid "Text Color for out of stock message."
+msgstr "স্টক আউট মেসেজের ফন্ট রং"
+
+#: includes/Insights.php:934 includes/Lib_API.php:183
+msgid "Thank you -- Support Ticket Submitted."
+msgstr "ধন্যবাদ, সাপোর্ট টিকেট সাবমিট করা হয়েছে"
+
+#: includes/Insights.php:780
+msgid "The plugin didn't work as expected"
+msgstr "আশানুরুপ কাজ করছে না"
+
+msgid "The plugin is great, but I need specific feature that you don't support"
+msgstr "প্লাগিনটা ভালো কিন্তু আমার নির্দিষ্ট কিছু ফিচার দরকার"
+
+#: includes/Insights.php:768
+msgid "The plugin is not working"
+msgstr "প্লাগিনটি কাজ করছে না"
+
+#: out-of-stock-msg.php:270
+msgid "This controls the position of out of stock message."
+msgstr "এটা স্টক আউট মেসেজ এর পজিশন কন্ট্রোল করে"
+
+#: includes/Settings.php:71 includes/Settings.php:121
+msgid "Tick this if you want to show global out of stock message."
+msgstr "এটা টিক দিন যদি আপনি গ্লোবাল মেসেজ দেখাতে চান"
+
+#: out-of-stock-msg.php:635
+msgid "Unserializing instances of this class is forbidden."
+msgstr "এই ক্লাসের ইন্সট্যান্স আনসিরিয়ালাইজ করা অবৈধ"
+
+#: includes/Settings.php:67
+msgid "Use Custom Message"
+msgstr "কাস্টম মেসেজ ব্যবহার করুন"
+
+#: includes/Settings.php:117
+msgid "Use Global Message"
+msgstr "গ্লোবাল মেসেজ ব্যবহার করুন"
+
+#: includes/Api.php:69
+msgid "User Permission error"
+msgstr "ব্যবহারের অধিকার নাই"
+
+#: includes/Lib_API.php:191
+msgid "Video Tutorials"
+msgstr "ভিডিও টিউটোরিয়াল"
+
+#: out-of-stock-msg.php:281 out-of-stock-msg.php:535
+msgid "WC After Single Product"
+msgstr "পণ্যের তথ্যের নিচে"
+
+#: out-of-stock-msg.php:279 out-of-stock-msg.php:533
+msgid "WC After Single Product Summary"
+msgstr "পণ্যের সংক্ষিপ্ত বর্ণনার পরে"
+
+#: out-of-stock-msg.php:280 out-of-stock-msg.php:534
+msgid "WC Before Single Product"
+msgstr "পণ্যের তথ্যের আগে"
+
+#: out-of-stock-msg.php:278 out-of-stock-msg.php:532
+msgid "WC Before Single Product Summary"
+msgstr "পণ্যের সংক্ষিপ্ত বর্ণনার আগে"
+
+#: out-of-stock-msg.php:283 out-of-stock-msg.php:537
+msgid "WC product meta end"
+msgstr "পণ্যের মেটা ডাটার পরে"
+
+#: out-of-stock-msg.php:282 out-of-stock-msg.php:536
+msgid "WC product meta start"
+msgstr "পণ্যের মেটা ডাটার আগে"
+
+#: out-of-stock-msg.php:284 out-of-stock-msg.php:285 out-of-stock-msg.php:538
+#: out-of-stock-msg.php:539
+msgid "WC product thumbnails"
+msgstr "পণ্যের ছবির নিচে"
+
+#: out-of-stock-msg.php:277 out-of-stock-msg.php:531
+msgid "WC Single Product Summary"
+msgstr "পণ্যের সংক্ষিপ্ত বর্ণনায়"
+
+#: includes/Insights.php:1011
+msgid "Website"
+msgstr "ওয়েবসাইট"
+
+#: includes/adminemail.php:86
+msgid "Welcome to {site_title}"
+msgstr "{site_title} এ স্বাগতম "
+
+#: includes/Insights.php:782
+msgid "What did you expect?"
+msgstr "আপনি কি আশা করেছিলেন"
+
+#: includes/Insights.php:470
+msgid "what we collect"
+msgstr "আমরা যা সংগ্রহ করি"
+
+#: includes/Insights.php:758
+msgid "Which plugin?"
+msgstr "কোন প্লাগিন"
+
+#: out-of-stock-msg.php:141
+msgid "Woo Inventory"
+msgstr "উ ইনভেন্টরি"
+
+#: includes/Insights.php:752
+msgid "Would you like us to assist you?"
+msgstr "আমরা কি আপনাকে সাহায্য করবো ?"
+
+#: out-of-stock-msg.php:175
+msgid "You can change below settings with separate menu."
+msgstr "নিচের সেটিংস আলাদা মেন্যুতে পরিবর্তন করতে পারবেন"
+
+#: includes/Lib_API.php:230
+msgid "Your name and email address."
+msgstr "আপনার নাম এবং ইমেইল এড্রেস"
+
+#: includes/Lib_API.php:184
+msgid "Your ticket has been successfully submitted."
+msgstr "আপনার টিকেট সফলভাব সাবমিট করা হয়েছে"
