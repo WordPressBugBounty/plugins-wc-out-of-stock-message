@@ -1,7 +1,7 @@
-=== Out of Stock Message Manage ===
-Contributors: coderstime, lincolndu
+=== Out of Stock Message Manage for WooCommerce ===
+Contributors: coderstime
 Donate link: https://buymeacoffee.com/coderstime
-Tags: out of stock, sold out badge, variation swatches, woocommerce
+Tags: out of stock, sold out badge, variation swatches, badge, sold out
 Requires at least: 4.9 or higher
 Tested up to: 6.6
 Requires PHP: 7.4
@@ -9,7 +9,7 @@ Stable tag: 2.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
-Out of Stock Message Manage is an official plugin maintained by the Coderstime that add features on the woocommerce produt stock out. 
+Out of Stock Message Manage is an official plugin maintained by the Coderstime that add features on the woocommerce product stock out. 
 
 == Description ==
 
@@ -39,10 +39,10 @@ In Stock product quantity message on product page
 [iconMatrix](https://wordpress.org/support/topic/excellent-support-easy-to-use-6/): 
 > 'Excellent Support & Easy to use
 
->I needed to get rid of the “Out of Stock” message and the “Sold Out” bubble completely and they helped me check the correct box to achieve what we needed for that single product. IMO if you are running a Woo system then you need this plugin. We sell tournaments and “Tournament is Closed” is better than “Out of Stock” 🙂
+> I needed to get rid of the “Out of Stock” message and the “Sold Out” bubble completely and they helped me check the correct box to achieve what we needed for that single product. IMO if you are running a Woo system then you need this plugin. We sell tournaments and “Tournament is Closed” is better than “Out of Stock” 🙂
 
-I love this plugin,
-Steve
+> I love this plugin,
+> Steve
 
 [Ruben Zuidervaart](https://wordpress.org/support/topic/getting-rid-of-out-of-stock-message/): 
 > 'Getting Rid Of “OUT OF STOCK” Message'
@@ -53,16 +53,15 @@ Steve
 > Carl M.
 > BusinessByWEB
 
-
 == Why does this plugin? ==
 This plugin allows you to supply a literal message for stock out product. 
 
-Default "Out of Stock" Message
+= Default "Out of Stock" Message =
 1. Go to Dashboard > Out of Stock Menu 
 2. Set Message, Badge, settings, get shortcode details
 3. Save Changes
 
-Individual "Out of Stock" Message
+= Individual "Out of Stock" Message =
 1. Go to Add/Edit product panel
 2. Open Inventory settings of product panel
 3. On Stock Status, check 'Out of Stock'
@@ -70,7 +69,7 @@ Individual "Out of Stock" Message
 5. Click Publish or Update
 
 
-For Developers
+== For Developers ==
 By default, you don\'t have to modify any code of template file. Because the plugin automatically displays out of stock note right after product title in single product page (as seen above).
 If you want to display the out of stock note at other places, use the codes below.
 Getting individual note value: get_post_meta($post->ID, \'_out_of_stock_note\', true);

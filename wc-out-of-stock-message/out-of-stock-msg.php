@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Out Of Stock Message Manage
+ * Plugin Name: Out Of Stock Message Manage for WooCommere
  * Requires Plugins: woocommerce
  * Plugin URI: https://coders-time.com/plugins/out-of-stock/
  * Version: 2.6
