@@ -193,7 +193,7 @@ final class Lib_API {
         $response    .= '<br><br><br>';
         $toc          = sprintf( '<a href="https://coders-time.com/terms-condition-wcosm/" target="_blank">%s</a>', esc_html__( 'Terms & Conditions', 'wcosm' ) );
         $pp           = sprintf( '<a href="https://coders-time.com/privacy-policy/" target="_blank">%s</a>', esc_html__( 'Privacy Policy', 'wcosm' ) );
-        /* translators: 1: Link to the Trams And Condition Page, 2: Link to the Privacy Policy Page */
+        /* translators: 1: Link to the Terms And Condition Page, 2: Link to the Privacy Policy Page */
         $policy    = sprintf( esc_html__( 'Please read our %1$s and %2$s', 'wcosm' ), $toc, $pp );
         $response .= sprintf( '<p style="font-size: 12px;">%s</p>', $policy );
 

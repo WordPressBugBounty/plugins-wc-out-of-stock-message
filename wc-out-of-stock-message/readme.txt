@@ -5,7 +5,7 @@ Tags: out of stock, sold out badge, variation swatches, badge, sold out
 Requires at least: 4.9 or higher
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 2.6
+Stable tag: 2.7
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -17,13 +17,21 @@ Out of Stock Manage for WooCommerce plugin is used to write out of stock custom 
 
 You can change default stock out status message and change colors with where message will be shown.
 
-FEATURES
+== FEATURES ==
 Allow product specific message.
 Allow global message from plugin settings.
 Sold out badge for category and shop page also single product page
 Can customize message showing position in product page.
+Badge Position with customize color.
 Admin will receive when a product stock out.
-In Stock product quantity message on product page
+In Stock product quantity message on product page.
+Variation swatches product wise stock out message also global message feature.
+Block Theme support reactjs feature.
+
+= Sold Out Bage =
+Stock out message manage plugin has sold "Sold Out" badge feature. You can set sold out message in your language, Not fixed message.
+Sold out badge will be shown on product details page, Category and Shop page. You can set it's position Left Top or Right top position.
+You also can set it background color with Text color. It will work both block theme and classical theme.
 
 
 ### USEFULL LINKS:
@@ -157,13 +165,19 @@ Yes, Our plugin compatible with any kind of WooCommerce based theme including wo
 10. Variable Product Edit Panel Screenshot
 
 == Changelog ==
+= 2.7 = 2024-10-19
+* Change settings panel head and active color
+* Fix settings panel margin 
+* Notification fix 
+* Block Theme badge position and color fix
+
 = 2.6 = 2024-10-9
 * Back Inventory Settings
 * Classic theme and block theme different result
 * Variable product wise message modification
 * Variable stock out message bottom 10px margin
 * Badge Postion Left and right Top
-* Language support for bangla, USA, partial France
+* Language support for bangla, USA, France
 
 = 2.5 = 2024-10-4
 * Variable Product Custom Message Addition

@@ -182,7 +182,7 @@ class Promotions {
 	private function __get_promos() 
 	{
 		$promos = get_transient( $this->client->getSlug() . '_cached_promos' );
-		if ( empty( $promos ) ) {
+		if ( empty( $promos ) || $promos === '[]' ) {
 			// get promotions data from json source.
 			$response = wp_safe_remote_get( $this->promotionSrc, array( 'timeout' => 15 ) ); // phpcs:ignore
 			$promos   = wp_remote_retrieve_body( $response );

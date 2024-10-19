@@ -161,7 +161,7 @@ class Client {
 			return $this->promotions;
 		}
 		if ( ! class_exists( __NAMESPACE__ . '\Promotions' ) ) {
-			require_once __DIR__ . '/Promotions.php';
+			require_once __DIR__ . '\Promotions.php';
 		}
 		$this->promotions = new Promotions( $this );
 		

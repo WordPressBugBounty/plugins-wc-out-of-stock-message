@@ -3,7 +3,7 @@
  * Plugin Name: Out Of Stock Message Manage for WooCommere
  * Requires Plugins: woocommerce
  * Plugin URI: https://coders-time.com/plugins/out-of-stock/
- * Version: 2.6
+ * Version: 2.7
  * Author: coderstime
  * Author URI: https://www.facebook.com/coderstime
  * Text Domain: wcosm
@@ -28,7 +28,7 @@ if ( ! defined( 'WP_WCSM_PLUGIN_PATH' ) ) {
 if ( ! defined( 'WCOSM_LIBS_PATH' ) ) {
 	define( 'WCOSM_LIBS_PATH', dirname( WCOSM_PLUGIN_FILE ) . '/includes/' );
 }
-define ( 'wcosm_ver', '2.6' );
+define ( 'wcosm_ver', '2.7' );
 define ( 'WCOSM_TEXT_DOMAIN', 'wcosm' );
 define ( 'WCOSM_PLUGIN_Name', 'Out Of Stock Manage for WooCommerce' );
 

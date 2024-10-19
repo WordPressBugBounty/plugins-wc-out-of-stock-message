@@ -130,8 +130,9 @@ class Api {
 	
 	public function handle_get_data( \WP_REST_Request $request ) 
 	{
-		$data = get_option('woocommerce_out_of_stock');
-		$data['woocommerce_out_of_stock_message'] = get_option('woocommerce_out_of_stock_message');
+		$data = get_option('woocommerce_out_of_stock',[]);
+		$data['woocommerce_out_of_stock_message'] = get_option('woocommerce_out_of_stock_message','');
+        $data['badge_pos'] = get_option('wcosm_badge_position','left-top');
 
         // Check for nonce security 
         // $nonce = $request->get_header('x-ct-nonce');
