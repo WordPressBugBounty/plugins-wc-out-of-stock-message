@@ -40,7 +40,8 @@ class Api {
 			'get-data', 
 			array(
 				'methods' => 'get',
-				'callback' => [$this,'handle_get_data']
+				'callback' => [$this,'handle_get_data'],
+                'permission_callback' => '__return_true', // Public access
 			)
 		);
 	}

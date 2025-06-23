@@ -1,15 +1,15 @@
-=== Out of Stock Message Manage for WooCommerce ===
+=== Out of Stock Message Manager for WooCommerce ===
 Contributors: coderstime
 Donate link: https://buymeacoffee.com/coderstime
 Tags: out of stock, sold out badge, variation swatches, badge, sold out
 Requires at least: 4.9 or higher
-Tested up to: 6.6
+Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 2.7
+Stable tag: 2.8
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
-Out of Stock Message Manage is an official plugin maintained by the Coderstime that add features on the woocommerce product stock out. 
+Out of Stock Message Manager is an official plugin maintained by the Coderstime that add features on the woocommerce product stock out. 
 
 == Description ==
 
@@ -42,7 +42,7 @@ You also can set it background color with Text color. It will work both block th
 = How it works ? =
 [youtube https://youtu.be/guh-hkrJF_E]
 
-== # 🏆 Users' Feedback For Out of Stock Message Manage ## ==
+== # 🏆 Users' Feedback For Out of Stock Message Manager ## ==
 
 [iconMatrix](https://wordpress.org/support/topic/excellent-support-easy-to-use-6/): 
 > 'Excellent Support & Easy to use
@@ -60,6 +60,32 @@ You also can set it background color with Text color. It will work both block th
 
 > Carl M.
 > BusinessByWEB
+
+### Upgrade to Out of Stock Pro for Advanced Features:
+
+Unlock additional features and support by upgrading to [Out of stock message manage](https://coders-time.com/plugins/out-of-stock/). This premium version of the out of stock message plugin offers enhanced features designed to take your business to the next level.
+
+**Out of stock message manage Pro Features:**
+
+* **Live Support:** Receive assistance for first-time integration to ensure a seamless experience.
+
+* **Installation Support:** Out of stock plugin installation support.
+
+* **Toast Notification:** Toast Notification system with on/off feature.
+
+* **Product wise subscriber** Collect stock out product interested subscriber phone/email.
+
+* **Same message for all stock out products:** Global message for all products.
+
+* **Group products:** WooCommerce group products stock out message system.
+
+* **WordPress and WooCommerce Support:** If your wordpress and woocommerce version do not support our premium plugin we will give you support to work.
+
+
+With the Out of stock message manager plugin, you can empower your website with cutting-edge features that cater to a diverse audience. Upgrade now to unlock the full potential of your product delivery strategy.
+
+**Try [Out of stock message manager](https://coders-time.com/plugins/out-of-stock/) version.**
+
 
 == Why does this plugin? ==
 This plugin allows you to supply a literal message for stock out product. 
@@ -127,7 +153,7 @@ On our 1.0.5 version we bring in stock message with how many product on your inv
 
 
 == Frequently Asked Questions ==
-When activated this plugin will allow the admin to make changes in the custom fields. These settings can be changed at the Out of Stock Message Manage Plugin.
+When activated this plugin will allow the admin to make changes in the custom fields. These settings can be changed at the Out of Stock Message Manager Plugin.
 
 = Support Block Theme ? =
 
@@ -152,6 +178,10 @@ Out of stock plugin is a quick solution for woocommerce product inventory system
 = Is it compatible with WooCommerce Theme? =
 Yes, Our plugin compatible with any kind of WooCommerce based theme including woostify / OceanWP / Astra / Flatsome / X-Theme / Avada / Storefront / Labomba / WR Nitro / Divi / BeTheme / blocksy / redlens / hever / swiftstore / kadence / justwrite / bard / shoppingcart / cosmetro / eona / graceful / Pink Theme / shoptimizer / wildwood. But sometimes it may require small css tweak. if you face any kind of problem, our dediated support team ready to help you. 
 
+== How to contact your support? == 
+You can contact us via the support Forum of WordPress or live support by whatsapp at +8801736458080 or Email at coderstime@gmail.com. 
+
+
 == Screenshots ==
 1. Stock out message with bg and color settings page
 2. Stock Out Badge settings page
@@ -165,6 +195,10 @@ Yes, Our plugin compatible with any kind of WooCommerce based theme including wo
 10. Variable Product Edit Panel Screenshot
 
 == Changelog ==
+= 2.8 = 20255-6-23
+* Badge Default position Right to left
+* Message.php ${var} update to .$var. for PHP update
+
 = 2.7 = 2024-10-19
 * Change settings panel head and active color
 * Fix settings panel margin 
@@ -220,7 +254,7 @@ Yes, Our plugin compatible with any kind of WooCommerce based theme including wo
 * Contact details on stock out menu
 * Premium plugin feature details
 * Allow Tracking feature for better service 
-* Name change to "Out of Stock Message Manage" from "Out of Stock Message for Woocommerce"
+* Name change to "Out of Stock Message Manager" from "Out of Stock Message for Woocommerce"
 
 = 1.0.6 =
 * Variable product false issue fixed

@@ -36,7 +36,7 @@ class Message {
 			if($out_of_stock_msg){
 				$out_of_stock_msg = strip_tags($out_of_stock_msg);
 			}
-			return $price . "<span style='display:block'> ${out_of_stock_msg} </span><div style='display:none' class='wcosm-stock-out-msg'>${stock_text}</div>";
+			return $price . "<span style='display:block'> " . $out_of_stock_msg . " </span><div style='display:none' class='wcosm-stock-out-msg'>" . $stock_text . "</div>";
 		}
 		return $price;
 	}

@@ -12,10 +12,10 @@ $wcosm_product = is_object($product) ? $product : wc_get_product();
 	$postion_css = 'top: -5px;right: -5px;';
 	switch($position){
 		case 'right-top':
-			$postion_css = 'right: -5px;top: -5px;';
+			$postion_css = 'right: -5px;top: -5px;width:fit-content;';
 			break;
 		case 'left-top':
-			$postion_css = 'left: -5px;top: -5px;';
+			$postion_css = 'left: -5px;top: -5px;width:fit-content;';
 			break;
 		default:
 	}

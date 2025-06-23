@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name: Out Of Stock Message Manage for WooCommere
+ * Plugin Name: Out Of Stock Message Manager for WooCommere
  * Requires Plugins: woocommerce
  * Plugin URI: https://coders-time.com/plugins/out-of-stock/
- * Version: 2.7
+ * Version: 2.8
  * Author: coderstime
  * Author URI: https://www.facebook.com/coderstime
  * Text Domain: wcosm
@@ -17,6 +17,8 @@
 
 defined( 'ABSPATH' ) || exit;
 
+add_action( 'plugins_loaded', 'outofstockmanage_init', 10 );
+
 if ( ! defined( 'WCOSM_PLUGIN_FILE' ) ) {
 	define( 'WCOSM_PLUGIN_FILE', __FILE__ );
 }
@@ -28,7 +30,7 @@ if ( ! defined( 'WP_WCSM_PLUGIN_PATH' ) ) {
 if ( ! defined( 'WCOSM_LIBS_PATH' ) ) {
 	define( 'WCOSM_LIBS_PATH', dirname( WCOSM_PLUGIN_FILE ) . '/includes/' );
 }
-define ( 'wcosm_ver', '2.7' );
+define ( 'wcosm_ver', '2.8' );
 define ( 'WCOSM_TEXT_DOMAIN', 'wcosm' );
 define ( 'WCOSM_PLUGIN_Name', 'Out Of Stock Manage for WooCommerce' );
 
@@ -165,10 +167,21 @@ if ( ! class_exists( 'outofstockmanage' ) ) :
 		*/
 		public function wcosm_setting( $setting ) 
 		{
+			add_action('admin_footer', function(){
+				?>
+				<script>
+					jQuery(document).ready(function($) {
+						$("#wcosmp_global_all, #wc_back_order_msg,").prop("disabled", true);
+						/* $("#wcosmp_global_all, #wc_back_order_msg, #wc_in_stock_timer, #wc_in_stock_date, #wc_in_stock_time").prop("disabled", true); */
+					});
+				</script>
+				<?php
+			});
+
 			?>
 				<h4> 
 					<?php _e('You can change below settings with separate menu.','wcosm'); ?> 
-					<a href="<?php echo admin_url( 'admin.php?page=ct-out-of-stock' );  ?>"> Click Here </a> 
+					<a href="<?php echo admin_url( 'admin.php?page=ct-out-of-stock' );  ?>"> <?php _e("Click Here", "wcosm") ?> </a> 
 				</h4>
 			<?php
 			$out_stock[] = [
@@ -243,9 +256,9 @@ if ( ! class_exists( 'outofstockmanage' ) ) :
 			    'std'     => 'right-top', /*WooCommerce < 2.0*/
 			    'default' => 'right-top',
 			    'type'    => 'select',
-			    'options' => [
-			      'right-top' 		=> __( 'Right Top Position', 'wcosm' ),
-			      'left-top' 		=> __( 'Left Top Position', 'wcosm' )
+			    'options' => [			      
+			      'left-top' 		=> __( 'Left Top Position', 'wcosm' ),
+				  'right-top' 		=> __( 'Right Top Position', 'wcosm' )
 				],
 			    'desc_tip' =>  true,
 			];
@@ -311,6 +324,60 @@ if ( ! class_exists( 'outofstockmanage' ) ) :
 				'type' 		=> 'color',
 				'autoload'  => false
 			];
+
+			$out_stock[] = [
+				'title' 	=> __( 'Global Message for All products', 'wcosm' ),
+				'desc' 		=> __( 'Premium plugin service', 'wcosm' ),
+				'id' 		=> 'wcosmp_global_all',
+				'default'	=> 'no',
+				'css' 		=> 'margin-top:10px;',
+				'type' 		=> 'checkbox',
+				'autoload'  => false,
+				'desc_tip' => true,
+			];
+
+			$out_stock[] = [
+				'title' 	=> __( 'Back Order Notification', 'wcosm' ),
+				'desc' 		=> __( 'Premium plugin service.', 'wcosm' ),
+				'id' 		=> 'wc_back_order_msg',
+				'css' 		=> 'width:53%; height: 125px;margin-top:10px;',
+				'type' 		=> 'textarea',
+				'autoload'  => false,
+				'desc_tip' => true,
+			];
+
+			if(false):
+				$out_stock[] = [
+					'title' 	=> __( 'In Stock Timer', 'wcosm' ),
+					'desc' 		=> __( 'Premium plugin service', 'wcosm' ),
+					'id' 		=> 'wc_in_stock_timer',
+					'css' 		=> 'margin-top:10px;',
+					'type' 		=> 'checkbox',
+					'autoload'  => false,
+					'desc_tip' => true,
+				];
+
+				$out_stock[] = [
+					'title' 	=> __( 'Product avabaile date', 'wcosm' ),
+					'desc' 		=> __( 'Premium plugin service.', 'wcosm' ),
+					'id' 		=> 'wc_in_stock_date',
+					'css' 		=> 'min-width:300px;margin-top:10px;',
+					'type' 		=> 'date',
+					'class'		=> 'wc_in_stock_date',
+					'autoload'  => false,
+					'desc_tip' => true,
+				];
+
+				$out_stock[] = [
+					'title' 	=> __( 'Product avabaile time', 'wcosm' ),
+					'desc' 		=> __( 'Premium plugin service', 'wcosm' ),
+					'id' 		=> 'wc_in_stock_time',
+					'css' 		=> 'min-width:300px;margin-top:10px;',
+					'type' 		=> 'time',
+					'autoload'  => false,
+					'desc_tip' => true,
+				];
+			endif;
 
 			array_splice( $setting, 2, 0, $out_stock );
 			return $setting;
@@ -776,8 +843,6 @@ if ( ! class_exists( 'outofstockmanage' ) ) :
 	}
 endif;
 
-add_action( 'plugins_loaded', 'outofstockmanage_init', 10 );
-
 /**
  * Initialize the plugin.
  *
@@ -785,7 +850,27 @@ add_action( 'plugins_loaded', 'outofstockmanage_init', 10 );
  */
 function outofstockmanage_init() 
 {
-	load_plugin_textdomain( 'wcosm', false, plugin_basename( dirname( __FILE__ ) ) . '/languages' );	
-	outofstockmanage::instance();
+	/**
+	 * Is premium plugin active
+	 * execution
+	 */
+	if ( !function_exists('is_plugin_active') ) {
+		include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+	}
+	// $premium_file_exist = file_exists( \WP_PLUGIN_DIR . '/wc-sold-out-premium/sold-out-premium.php' );
+	$is_plugin_active = is_plugin_active( 'wc-sold-out-premium/sold-out-premium.php' );
+	
+	if($is_plugin_active){
+		return true;
+	}else{
+		/* *
+		* Execute free version plugin
+		*/
+		add_action( 'init', function(){
+			load_plugin_textdomain( 'wcosm', false, plugin_basename( dirname( __FILE__ ) ) . '/languages' );
+			outofstockmanage::instance();
+		} );
+	}
+	
 }
 /* file end here */
